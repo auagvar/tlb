@@ -47,7 +47,7 @@ body{
 	height:81px;
 }
 .main-heading{
-	background-image:url("images/box1.png");
+	background-image:url("../images/box1.png");
 	background-repeat: no-repeat;
 	background-size:100%;	 
 	margin:auto;
@@ -75,9 +75,8 @@ body{
 	padding:10px;	
 }
 
-}
-.centralbox{
-	background-image:url("images/3.png");
+.centralbox {
+	background-image:url("../images/tp3.png");
 	background-repeat: no-repeat;
 	background-size:100%;
 	background-position:left;	 
@@ -94,8 +93,8 @@ body{
 	background-position:center;
 
 }
-.centralbox label{
 
+.centralbox label{
     width:fit-content; 
 	border-radius:3px;
 	background-color:#fff;
@@ -107,6 +106,13 @@ body{
 	color:#003b5c;
 	border:3px solid #003b5c;
 	margin-bottom:5px;
+}
+
+.centralbox .checkboxDonations label {
+	border-width: 0;
+	display: inline;
+	line-height: 30px;
+	background-color: transparent;
 }
 
 .centralbox input[type="text"]{
@@ -173,7 +179,7 @@ body{
 .aboutUs{
 	width:100%; 
 	display:block;
-	background-image:url("images/aboutus.png");	
+	background-image:url("../images/aboutus.png");	
 	height:500px;
 	position:absolute;
 	background-size:100%;
