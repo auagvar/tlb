@@ -1,3 +1,12 @@
+function handleLocationChange() {
+	if (document.getElementById('selected-location').value == "Other") {
+		document.getElementById('otherLocationBox').style.display = "block";
+	} else {
+		document.getElementById('otherLocationBox').style.display = "none";
+		document.getElementById('other-location').value = ""
+	}
+}
+
 function loadExistingData() {
 	userInfo = JSON.parse(window.localStorage.getItem("userInfo"));
 	if (userInfo) {
@@ -22,6 +31,8 @@ function loadExistingData() {
 			document.getElementById('selected-location').value = "Other";
 			document.getElementById('other-location').value = userInfo.location;
 		}
+
+		handleLocationChange()
 
 	}
 }
