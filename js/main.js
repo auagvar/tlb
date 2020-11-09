@@ -50,8 +50,8 @@ function checkFunction() {
 	var howWillYouDonate = document.getElementById('HowWillYouDonate').value;
 	userInfo.deliveryMethod = howWillYouDonate;
 
-	var howElsewillYouDonate = document.getElementById('HowElsewillYouDonate').value;
-	if (howElsewillYouDonate != "") {
+	var howElsewillYouDonate = document.getElementById('howElsewillYouDonate').value;
+	if (howWillYouDonate == "otherWay" && howElsewillYouDonate != "") {
 		userInfo.deliveryMethod = howElsewillYouDonate
 	}
 
@@ -59,4 +59,5 @@ function checkFunction() {
 	userInfo.hasShelter = shelterForPeople
 
 	window.localStorage.setItem("userInfo", JSON.stringify(userInfo))
+	
 }
