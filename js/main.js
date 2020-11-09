@@ -1,6 +1,29 @@
 function loadExistingData() {
 	userInfo = JSON.parse(window.localStorage.getItem("userInfo"));
-	document.getElementById('fname').value = userInfo.firstName;
+	if (userInfo) {
+		document.getElementById('fname').value = userInfo.firstName;
+		document.getElementById('lname').value = userInfo.lastName;
+		document.getElementById('email').value = userInfo.email;
+		document.getElementById('phonenumber').value = userInfo.phone;
+
+		var selectableLocationOptions = document.getElementsByClassName("location");
+		var selectableLocationNames = []
+
+		for (var i = 0; i < selectableLocationOptions.length; i++) {
+			var locationName = selectableLocationOptions[i].value;
+			if (locationName != "Other") {
+				selectableLocationNames.push(locationName)
+			}
+		}
+
+		if (selectableLocationNames.includes(userInfo.location)) {
+			document.getElementById('selected-location').value = userInfo.location;
+		} else {
+			document.getElementById('selected-location').value = "Other";
+			document.getElementById('other-location').value = userInfo.location;
+		}
+
+	}
 }
 
 
