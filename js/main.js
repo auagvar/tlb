@@ -42,7 +42,7 @@ function loadExistingData() {
 		handleLocationChange()
 
 
-		var selectableDeliveryOptions=document.getElementsByClassName("delivery");
+		var selectableDeliveryOptions=document.getElementById("howWillYouDonate").children;
 		var selectableDelivery =[]
 
 		for(var k=0; k< selectableDeliveryOptions.length; k++){
@@ -95,16 +95,19 @@ function checkFunction() {
 		userInfo.location = otherLocation
 	}
 
-	/*var checkbox = document.getElementsByClassName("checkboxlist");
-	var allcheckboxlist =[];
+	var checkbox = document.getElementsByClassName("checkboxlist");
+	var allCheckedItems =[];
 	for (var i = 0; i < checkbox.length; i++) {
 		if( checkbox[i].checked == true){
-			allcheckboxlist.push(checkbox[i].value);
+			if (checkbox[i].value == "Other") {
+				allCheckedItems.push(document.getElementById('OtherItems').value);
+			} else {
+				allCheckedItems.push(checkbox[i].value);
+			}
 		}
 	}
+	userInfo.items = allCheckedItems;
 
-	var OtherItems = document.getElementById('OtherItems').value;
-	console.log(OtherItems);*/
 
 	var howWillYouDonate = document.getElementById('howWillYouDonate').value;
 	userInfo.deliveryMethod = howWillYouDonate;
