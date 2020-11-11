@@ -6,7 +6,14 @@ function handleLocationChange() {
 		document.getElementById('other-location').value = ""
 	}
 }
-
+function handleDeliveryChange() {
+	if(document.getElementById('howWillYouDonate').value=="Other") {
+		document.getElementById('other-delivery').style.display="block";
+	} else{
+		document.getElementById('other-delivery').style.display="none";
+		document.getElementById('howElsewillYouDonate').value=""
+	}
+}
 function loadExistingData() {
 	userInfo = JSON.parse(window.localStorage.getItem("userInfo"));
 	if (userInfo) {
@@ -14,7 +21,7 @@ function loadExistingData() {
 		document.getElementById('lname').value = userInfo.lastName;
 		document.getElementById('email').value = userInfo.email;
 		document.getElementById('phonenumber').value = userInfo.phone;
-
+		
 		var selectableLocationOptions = document.getElementsByClassName("location");
 		var selectableLocationNames = []
 
@@ -33,6 +40,24 @@ function loadExistingData() {
 		}
 
 		handleLocationChange()
+
+
+		var selectableDeliveryOptions=document.getElementsByClassName("delivery");
+		var selectableDelivery =[]
+
+		for(var k=0; k< selectableDeliveryOptions.length; k++){
+			var deliveryWay=selectableDeliveryOptions[k].value;
+			if (deliveryWay != "Other"){
+				selectableDelivery.push(deliveryWay)
+			}
+		}
+		if(selectableDelivery.includes(userInfo.deliveryMethod)){
+			document.getElementById('howWillYouDonate').value=userInfo.deliveryMethod
+		}else{
+			document.getElementById('howWillYouDonate').value="Other";
+			document.getElementById('howElsewillYouDonate').value=userInfo.deliveryMethod
+		}
+		handleDeliveryChange()
 
 	}
 }
@@ -81,11 +106,11 @@ function checkFunction() {
 	var OtherItems = document.getElementById('OtherItems').value;
 	console.log(OtherItems);*/
 
-	var howWillYouDonate = document.getElementById('HowWillYouDonate').value;
+	var howWillYouDonate = document.getElementById('howWillYouDonate').value;
 	userInfo.deliveryMethod = howWillYouDonate;
 
 	var howElsewillYouDonate = document.getElementById('howElsewillYouDonate').value;
-	if (howWillYouDonate == "otherWay" && howElsewillYouDonate != "") {
+	if (howWillYouDonate == "Other" && howElsewillYouDonate != "") {
 		userInfo.deliveryMethod = howElsewillYouDonate
 	}
 

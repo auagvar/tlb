@@ -211,3 +211,7 @@ body{
  #otherLocationBox {
  	display: none;
  }
+
+ #other-delivery{
+ 	display:none;
+ }
