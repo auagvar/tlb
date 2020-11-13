@@ -69,6 +69,16 @@ function loadExistingData() {
 		}
 		handleDeliveryChange()
 
+
+		var checkbox = document.getElementsByClassName("checkboxlist");
+		for (var i = 0; i < checkbox.length; i++) {
+			if( userInfo.items.includes(checkbox[i].value)){
+				checkbox[i].checked = true
+			}
+		}
+
+		handleItemChange()
+
 	}
 }
 
@@ -110,7 +120,7 @@ function checkFunction() {
 	for (var i = 0; i < checkbox.length; i++) {
 		if( checkbox[i].checked == true){
 			if (checkbox[i].value == "Other") {
-				allCheckedItems.push(document.getElementById('OtherItems').value);
+				userInfo.otherItems = document.getElementById('OtherItems').value;
 			} else {
 				allCheckedItems.push(checkbox[i].value);
 			}
