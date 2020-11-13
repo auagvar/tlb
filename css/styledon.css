@@ -85,12 +85,16 @@ body{
 	
 }
 .form-group {
+	background-color:rgba(0,163,224, 0.6);
 	font-family:Georgia, Times, serif;
 	font-weight:bold;
-	padding:15px;
+	padding:10px 30px;
+
 	margin-right:25%;
 	margin-left:25%;
 	background-position:center;
+	border-left:5px solid #003b5c;
+	border-right:5px solid #003b5c;
 
 }
 
@@ -108,21 +112,17 @@ body{
 	margin-bottom:5px;
 }
  
-
 .centralbox .checkboxDonations label {
 	background-color:rgba(255,255,255,0.8);
 	border-width:0;
 	display: inline;
 	line-height:30px;
-	
-
 }
 
 .centralbox input[type="text"]{
 	padding:6px;
 	width:100%;
 	border-radius:4px;
-	opacity:0.8;
 	border:3px solid #003b5c;
 
 }
@@ -134,14 +134,13 @@ body{
 	background:#003b5c;
     background-blend-mode:hue;
     color:white;
-    text-align:center;
+    margin-left:35%;
 }
 .centralbox input[type="email"]{
 	padding:6px;
 	width:100%;
 	border-radius:4px;
 	border:none;
-	opacity:0.8;
 	border:3px solid #003b5c;
 
 }
@@ -149,7 +148,6 @@ body{
 	padding:6px 6px;
 	margin:6px 6px;
 	width:50%;
-	opacity:0.7;
 	border-radius:9px;
 	border:none;
 	background:#fff;
