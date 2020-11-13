@@ -14,6 +14,16 @@ function handleDeliveryChange() {
 		document.getElementById('howElsewillYouDonate').value=""
 	}
 }
+function handleItemChange(){
+	if(document.getElementById('checkboxOther').checked == true) {
+		document.getElementById("OtherItemBox").style.display='block';
+	} else { 
+		document.getElementById("OtherItemBox").style.display='none';
+		document.getElementById('OtherItems').value=""
+	}
+	
+
+}
 function loadExistingData() {
 	userInfo = JSON.parse(window.localStorage.getItem("userInfo"));
 	if (userInfo) {
