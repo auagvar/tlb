@@ -26,7 +26,8 @@ function handleItemChange(){
 }
 function loadExistingData() {
 	userInfo = JSON.parse(window.localStorage.getItem("userInfo"));
-	if (userInfo) {
+	if (userInfo && userInfo.length > 0) {
+		userInfo = userInfo[0]
 		document.getElementById('fname').value = userInfo.firstName;
 		document.getElementById('lname').value = userInfo.lastName;
 		document.getElementById('email').value = userInfo.email;
@@ -74,6 +75,9 @@ function loadExistingData() {
 		for (var i = 0; i < checkbox.length; i++) {
 			if( userInfo.items.includes(checkbox[i].value)){
 				checkbox[i].checked = true
+				var index = userInfo.items.indexOf(checkbox[i].value)
+				userInfo.items.splice(index, 0);
+				console.log(userInfo.items)
 			}
 		}
 
@@ -138,8 +142,26 @@ function checkFunction() {
 	}
 
 	var shelterForPeople = document.getElementById('ShelterForPeople').value;
-	userInfo.hasShelter = shelterForPeople
+	userInfo.hasShelter = shelterForPeople;
 
-	window.localStorage.setItem("userInfo", JSON.stringify(userInfo))
+	var donations = JSON.parse(window.localStorage.getItem("userInfo"));
+	if (!donations) {
+		donations = []
+	}
+	donations.push(userInfo)
+
+	window.localStorage.setItem("userInfo", JSON.stringify(donations))
 	
 }
+
+
+//Admin Code
+
+function loadExistingDonations() {
+	donations = JSON.parse(window.localStorage.getItem("userInfo"));
+	for (var i = 0; i < donations.length; i++) {
+		document.getElementById("donationsList").innerHTML += "<li class='donationListItem'>" + donations[i].firstName + " " + donations[i].lastName + "</li>";
+	}
+}
+
+
