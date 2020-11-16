@@ -52,7 +52,7 @@ body{
 	background-size:100%;	 
 	margin:auto;
 	width:100%;
-	background-color:#00a3e0;
+	
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	border-bottom:5px solid #003b5c;
@@ -60,16 +60,28 @@ body{
 .main-heading h1{
 	text-align:center;
 	font-family:Georgia, Times, serif;
-	color:white;
+	color:#00a3e0;
 	letter-spacing:5px;
 	font-size:30px;
+}
+.paragraphBox{
+	width:fit-content; 
+	height:fit-content;
+	display:block;
+	background-color:white;
+	margin-left:25%;
+	margin-right:25%;
+	margin-bottom:20px;
+	margin-top:20px;
+	background-color:rgba(255,255,255,0.5);
+	border-radius:30%;
 }
 .main-heading p{
 	margin-top:8px;
 	font-size:15px;
 	text-align:center;
 	font-family:Georgia, Times, serif;
-	color:#fff;
+	color:#003b5c;
 	font-stretch:ultra-expanded;
 	line-height:20px;
 	padding:10px;	
