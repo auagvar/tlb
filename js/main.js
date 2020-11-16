@@ -157,11 +157,16 @@ function checkFunction() {
 
 //Admin Code
 
+var donations = []
 function loadExistingDonations() {
 	donations = JSON.parse(window.localStorage.getItem("userInfo"));
 	for (var i = 0; i < donations.length; i++) {
-		document.getElementById("donationsList").innerHTML += "<li class='donationListItem'>" + donations[i].firstName + " " + donations[i].lastName + "</li>";
+		document.getElementById("donationsList").innerHTML += "<li class='donationListItem' onclick='showDonationInfo(" + i + ")'>" + donations[i].firstName + " " + donations[i].lastName + "</li>";
 	}
+}
+
+function showDonationInfo(item) {
+	document.getElementById("donationInfo").innerHTML = JSON.stringify(donations[item]);
 }
 
 

@@ -2,9 +2,6 @@
 	margin:0;
 	padding:0;
 }
-li a {
-	color: #000;
-}
 a{
 	text-decoration:none;
 	color:#fff;
@@ -231,4 +228,27 @@ body{
  
 #OtherItemBox{
 	display:none;
+}
+
+/*Admin Styles*/
+
+li {
+	color: #000;
+	cursor: pointer;
+}
+
+.donationsContainer {
+	display: flex;
+	margin: 20px;
+}
+
+#donationsList {
+	position: relative;
+	float: left;
+	width: 400px;
+}
+
+#donationInfo {
+	width: 45%;
+	float: right;
 }
