@@ -165,8 +165,10 @@ function loadExistingDonations() {
 	}
 }
 
-function showDonationInfo(item) {
-	document.getElementById("donationInfo").innerHTML = JSON.stringify(donations[item]);
+function showDonationInfo(itemIndex) {
+	var item = donations[itemIndex];
+	document.getElementById("donationInfo").innerHTML = "<span class='fullname'>" + item.firstName + " " + item.lastName + "</span></br>";
+	document.getElementById("donationInfo").innerHTML += "<span class='phone'>" + item.phone + "</span></br>";
 }
 
 
