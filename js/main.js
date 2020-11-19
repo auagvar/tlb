@@ -147,8 +147,8 @@ function checkFunction() {
 	var donations = JSON.parse(window.localStorage.getItem("userInfo"));
 	if (!donations) {
 		donations = []
+		donations.push(userInfo)
 	}
-	donations.push(userInfo)
 
 	window.localStorage.setItem("userInfo", JSON.stringify(donations))
 	
