@@ -6,7 +6,7 @@
 	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
-<body onload="loadExistingData()">
+<body>
 
 	<header>
  	<div class="top-upper-header"></div>
@@ -38,7 +38,8 @@
 
     <div class="form-group" >
 	   <label>Name</label>
-	   <input type="text" name="name" placeholder="type your name" id="fname"> 
+	   <input type="text" name="name" placeholder="type your name" id="fname">
+	   <span id="fname_error">The name cannot be empty</span> 
 	</div> 
     <div class="form-group">
 	   <label>Surname</label>

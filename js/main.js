@@ -25,13 +25,13 @@ function handleItemChange(){
 
 }
 function loadExistingData() {
-	userInfo = JSON.parse(window.localStorage.getItem("userInfo"));
-	if (userInfo && userInfo.length > 0) {
-		userInfo = userInfo[0]
-		document.getElementById('fname').value = userInfo.firstName;
-		document.getElementById('lname').value = userInfo.lastName;
-		document.getElementById('email').value = userInfo.email;
-		document.getElementById('phonenumber').value = userInfo.phone;
+	donationInfo = JSON.parse(window.localStorage.getItem("donationInfo"));
+	if (donationInfo && donationInfo.length > 0) {
+		donationInfo = donationInfo[0]
+		document.getElementById('fname').value = donationInfo.firstName;
+		document.getElementById('lname').value = donationInfo.lastName;
+		document.getElementById('email').value = donationInfo.email;
+		document.getElementById('phonenumber').value = donationInfo.phone;
 		
 		var selectableLocationOptions = document.getElementsByClassName("location");
 		var selectableLocationNames = []
@@ -43,11 +43,11 @@ function loadExistingData() {
 			}
 		}
 
-		if (selectableLocationNames.includes(userInfo.location)) {
-			document.getElementById('selected-location').value = userInfo.location;
+		if (selectableLocationNames.includes(donationInfo.location)) {
+			document.getElementById('selected-location').value = donationInfo.location;
 		} else {
 			document.getElementById('selected-location').value = "Other";
-			document.getElementById('other-location').value = userInfo.location;
+			document.getElementById('other-location').value = donationInfo.location;
 		}
 
 		handleLocationChange()
@@ -62,22 +62,22 @@ function loadExistingData() {
 				selectableDelivery.push(deliveryWay)
 			}
 		}
-		if(selectableDelivery.includes(userInfo.deliveryMethod)){
-			document.getElementById('howWillYouDonate').value=userInfo.deliveryMethod
+		if(selectableDelivery.includes(donationInfo.deliveryMethod)){
+			document.getElementById('howWillYouDonate').value=donationInfo.deliveryMethod
 		}else{
 			document.getElementById('howWillYouDonate').value="Other";
-			document.getElementById('howElsewillYouDonate').value=userInfo.deliveryMethod
+			document.getElementById('howElsewillYouDonate').value=donationInfo.deliveryMethod
 		}
 		handleDeliveryChange()
 
 
 		var checkbox = document.getElementsByClassName("checkboxlist");
 		for (var i = 0; i < checkbox.length; i++) {
-			if( userInfo.items.includes(checkbox[i].value)){
+			if( donationInfo.items.includes(checkbox[i].value)){
 				checkbox[i].checked = true
-				var index = userInfo.items.indexOf(checkbox[i].value)
-				userInfo.items.splice(index, 0);
-				console.log(userInfo.items)
+				var index = donationInfo.items.indexOf(checkbox[i].value)
+				donationInfo.items.splice(index, 0);
+				console.log(donationInfo.items)
 			}
 		}
 
@@ -88,7 +88,7 @@ function loadExistingData() {
 
 
 function checkFunction() {
-	var userInfo = {
+	var donationInfo = {
 		"firstName" : "",
 		"lastName" : "",
 		"email" : "",
@@ -100,23 +100,23 @@ function checkFunction() {
 	}	
 
 	var fname = document.getElementById('fname').value;
-	userInfo.firstName = fname;
+	donationInfo.firstName = fname;
 
 	var lname = document.getElementById('lname').value;
-	userInfo.lastName = lname;
+	donationInfo.lastName = lname;
 
 	var email = document.getElementById('email').value;
-	userInfo.email = email; 
+	donationInfo.email = email; 
 
 	var phoneNumber = document.getElementById('phonenumber').value;
-	userInfo.phone = phoneNumber;
+	donationInfo.phone = phoneNumber;
 
 	var location = document.getElementById('selected-location').value;
-	userInfo.location = location; 
+	donationInfo.location = location; 
 
 	var otherLocation = document.getElementById('other-location').value;
 	if (location == "Other" && otherLocation != "") {
-		userInfo.location = otherLocation
+		donationInfo.location = otherLocation
 	}
 
 	var checkbox = document.getElementsByClassName("checkboxlist");
@@ -124,33 +124,38 @@ function checkFunction() {
 	for (var i = 0; i < checkbox.length; i++) {
 		if( checkbox[i].checked == true){
 			if (checkbox[i].value == "Other") {
-				userInfo.otherItems = document.getElementById('OtherItems').value;
+				donationInfo.otherItems = document.getElementById('OtherItems').value;
 			} else {
 				allCheckedItems.push(checkbox[i].value);
 			}
 		}
 	}
-	userInfo.items = allCheckedItems;
+	donationInfo.items = allCheckedItems;
 
 
 	var howWillYouDonate = document.getElementById('howWillYouDonate').value;
-	userInfo.deliveryMethod = howWillYouDonate;
+	donationInfo.deliveryMethod = howWillYouDonate;
 
 	var howElsewillYouDonate = document.getElementById('howElsewillYouDonate').value;
 	if (howWillYouDonate == "Other" && howElsewillYouDonate != "") {
-		userInfo.deliveryMethod = howElsewillYouDonate
+		donationInfo.deliveryMethod = howElsewillYouDonate
 	}
 
 	var shelterForPeople = document.getElementById('ShelterForPeople').value;
-	userInfo.hasShelter = shelterForPeople;
+	donationInfo.hasShelter = shelterForPeople;
 
-	var donations = JSON.parse(window.localStorage.getItem("userInfo"));
+	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
 	if (!donations) {
-		donations = []
-		donations.push(userInfo)
+		donations = []		
+	}
+	if (donationInfo.firstName == "") {
+		console.log("The name cannot be empty")
+		document.getElementById("fname_error").style.display = "block";
+	} else {
+		donations.push(donationInfo)
 	}
 
-	window.localStorage.setItem("userInfo", JSON.stringify(donations))
+	window.localStorage.setItem("donationInfo", JSON.stringify(donations))
 	
 }
 
@@ -159,7 +164,7 @@ function checkFunction() {
 
 var donations = []
 function loadExistingDonations() {
-	donations = JSON.parse(window.localStorage.getItem("userInfo"));
+	donations = JSON.parse(window.localStorage.getItem("donationInfo"));
 	for (var i = 0; i < donations.length; i++) {
 		document.getElementById("donationsList").innerHTML += "<li class='donationListItem' onclick='showDonationInfo(" + i + ")'>" + donations[i].firstName + " " + donations[i].lastName + "</li>";
 	}

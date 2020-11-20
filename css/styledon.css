@@ -327,3 +327,6 @@ li {
     transform-origin: top;
 }
 
+#fname_error {
+	display: none;
+}
