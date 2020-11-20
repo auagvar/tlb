@@ -265,14 +265,15 @@ li {
 	align-items:center;
 	min-height:100vh; 
 	background-color:#111;
+	float: left;
 
 }
-.adminList{
+.donationsList{
 	margin:0;
 	padding:0;
 	box-shadow: 0 15px 40px rgba(0,0,0,1); 
 }
-.adminList li{
+.donationsList li{
 	position:relative;
 	list-style:none;
 	font-size:25px;
@@ -284,11 +285,11 @@ li {
 	transition:0.5s;
 	z-index:-0;
 }
-.adminList li:hover{
+.donationsList li:hover{
 
 	color:#111; 
 }
-.adminList li:before{
+.donationsList li:before{
 	content:'';
 	position: absolute;
 	top:0;
@@ -301,13 +302,13 @@ li {
     transition: transform 0.5s;
     transform-origin: bottom;
 }
-.adminList li:hover:before{
+.donationsList li:hover:before{
 	transform: scaleY(1);
     transition: transform 0.5s;
     transform-origin: top;
 }
 
-.adminList li:after{
+.donationsList li:after{
 	content:'';
 	position: absolute;
 	top:0;
@@ -321,7 +322,7 @@ li {
     transform-origin: bottom;
     filter: blur(40px);
 }
-.adminList li:hover:after{
+.donationsList li:hover:after{
 	transform: scaleY(1);
     transition: transform 0.5s;
     transform-origin: top;
@@ -329,4 +330,16 @@ li {
 
 #fname_error {
 	display: none;
+}
+
+#donationInfo {
+	margin:0;
+	padding:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh; 
+	background-color:red;
+	float: right;
+
 }

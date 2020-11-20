@@ -166,7 +166,9 @@ var donations = []
 function loadExistingDonations() {
 	donations = JSON.parse(window.localStorage.getItem("donationInfo"));
 	for (var i = 0; i < donations.length; i++) {
-		document.getElementById("donationsList").innerHTML += "<li class='donationListItem' onclick='showDonationInfo(" + i + ")'>" + donations[i].firstName + " " + donations[i].lastName + "</li>";
+		if (donations[i].firstName !="") {
+			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(" + i + ")'>" + donations[i].firstName + " " + donations[i].lastName + "</li>";
+		}
 	}
 }
 
