@@ -37,21 +37,25 @@
  <div class="centralbox">
 
     <div class="form-group" >
-	   <label>Name</label>
-	   <input type="text" name="name" placeholder="type your name" id="fname">
-	   <span id="fname_error">The name cannot be empty</span> 
+	   <label>Name*</label>
+	   <input type="text" name="name" placeholder="type your name" id="fname" class="required">
+	   <span id="fname_error" class="error">*The name cannot be empty</span> 
 	</div> 
     <div class="form-group">
-	   <label>Surname</label>
-	   <input type="text" name="Surname" placeholder="type your Surname" id="lname"> 
+	   <label>Surname*</label>
+	   <input type="text" name="Surname" placeholder="type your Surname" id="lname" class="required"> 
+	   <span id="lname_error" class='error'>*The Surname cannot be empty</span>
+
     </div>
     <div class="form-group">
-	   <label>Email</label>
-	   <input type="Email" name="email" placeholder="james@edu.aua.am" id="email">
+	   <label>Email*</label>
+	   <input type="Email" name="email" placeholder="james@edu.aua.am" id="email" class="required">
+	   <span id="email_error" class="error">*Valid email is requaired</span>
     </div>
     <div class="form-group">
-	   <label>Phone Number</label>
-	   <input type="text" name="phonenumber" placeholder="+374 094 00 00 01" id="phonenumber">
+	   <label>Phone Number*</label>
+	   <input type="text" name="phonenumber" placeholder="+374 094 00 00 01" id="phonenumber" class="required">
+	   <span id="phone_error" class="error">*Valid phonenumber is required</span>
     </div>
     <div class="form-group">
 	   <label>Location</label>

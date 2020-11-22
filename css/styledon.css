@@ -328,9 +328,6 @@ li {
     transform-origin: top;
 }
 
-#fname_error {
-	display: none;
-}
 
 #donationInfo {
 	margin:0;
@@ -343,3 +340,26 @@ li {
 	float: right;
 
 }
+
+
+ #fname_error {
+	display: none;
+}
+
+ #lname_error {
+	display: none;
+}
+ #email_error {
+	display: none;
+}
+ #phone_error {
+	display: none;
+}
+
+
+.error{
+	color:#e63e62;
+	font-size: 12px;
+	margin-top:5px;
+}
+

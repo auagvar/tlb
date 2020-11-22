@@ -149,8 +149,27 @@ function checkFunction() {
 		donations = []		
 	}
 	if (donationInfo.firstName == "") {
-		console.log("The name cannot be empty")
+		console.log("The name cannot be empty");
 		document.getElementById("fname_error").style.display = "block";
+		document.getElementById("fname").style.backgroundColor= '#efbbcc';
+	}
+
+	else if (donationInfo.lastName == "") {
+		console.log("The Surname cannot be empty");
+		document.getElementById("lname_error").style.display = "block";
+		document.getElementById("lname").style.backgroundColor= '#efbbcc';
+	}
+
+	else if (donationInfo.email == "") {
+		console.log("The email cannot be empty");
+		document.getElementById("email_error").style.display = "block";
+		document.getElementById("email").style.backgroundColor= '#efbbcc';
+	}
+
+	else if(donationInfo.phone == "") {
+		console.log("The phonenumber cannot be empty");
+		document.getElementById("phone_error").style.display = "block";
+		document.getElementById("phonenumber").style.backgroundColor= '#efbbcc';
 	} else {
 		donations.push(donationInfo)
 	}
@@ -177,5 +196,6 @@ function showDonationInfo(itemIndex) {
 	document.getElementById("donationInfo").innerHTML = "<span class='fullname'>" + item.firstName + " " + item.lastName + "</span></br>";
 	document.getElementById("donationInfo").innerHTML += "<span class='phone'>" + item.phone + "</span></br>";
 }
+
 
 
