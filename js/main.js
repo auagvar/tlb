@@ -212,21 +212,20 @@ function handleInputValidation(e, errorMessageBoxID) {
 
 //Admin Code
 
-var donations = []
 function loadExistingDonations() {
-	donations = JSON.parse(window.localStorage.getItem("donationInfo"));
+	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
 	for (var i = 0; i < donations.length; i++) {
 		if (donations[i].firstName !="") {
-			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(event)'><div>" + donations[i].firstName + " " + donations[i].lastName + "</div><div class='donationDetails'>" + getDonationInfo(i) + "</div></li>";
+			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(event)'><div>" + donations[i].firstName + " " + donations[i].lastName + "</div><div class='donationDetails'>" + getDonationInfo(donations[i]) + "</div></li>";
 		}
 	}
 }
 
-function getDonationInfo(itemIndex) {
-	var item = donations[itemIndex];
+function getDonationInfo(item) {
 	var innerHTML = "<span class='phone'>" + item.phone + "</span></br>";
 	innerHTML += "<span class= 'email'>" + item.email + "</span><br>";
 	innerHTML += "<span class= 'location'>" + item.location + "</span><br>";
+	innerHTML += "<span class= 'location'>" + item.items + "</span><br>";
 	return innerHTML;
 }
 
