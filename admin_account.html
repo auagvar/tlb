@@ -1,0 +1,35 @@
+<htmlOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    	<title>AUA Donation App</title>
+        <link rel="stylesheet" type="text/css" href="css/admin.css">
+    	<script type="text/javascript" src="js/main.js"></script>
+    </head>
+
+    <body onload="loadExistingDonations()">
+
+    	<header>
+         	<div class="top-upper-header"></div>
+
+            <div class="top-header-area">
+                <div class="aua-logo">
+            	    <a href="https://aua.am/" title="American University of Armenia" rel="home"> 
+            	    <img src="images/aualogo.png" alt="American University of Armenia" class="aua-logo-img"/> 
+            	    </a>
+                </div>    
+            </div>
+            <div class="boxik"></div>
+        </header>
+        <section class="adminSection">
+            <div>
+                <input type="button" name="Show All" value="Show All" onclick="showAll()"/>
+                <input type="button" name="Hide All" value="Hide All" onclick="hideAll()">
+            </div>
+            <div class="donationsContainer">
+                <ul class="donationsList" id="donationsList">
+                </ul>
+            </div>
+     	</section>
+    </body>
+</html>

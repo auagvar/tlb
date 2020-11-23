@@ -217,18 +217,39 @@ function loadExistingDonations() {
 	donations = JSON.parse(window.localStorage.getItem("donationInfo"));
 	for (var i = 0; i < donations.length; i++) {
 		if (donations[i].firstName !="") {
-			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(" + i + ")'>" + donations[i].firstName + " " + donations[i].lastName + "</li>";
+			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(event)'><div>" + donations[i].firstName + " " + donations[i].lastName + "</div><div class='donationDetails'>" + getDonationInfo(i) + "</div></li>";
 		}
 	}
 }
 
-function showDonationInfo(itemIndex) {
+function getDonationInfo(itemIndex) {
 	var item = donations[itemIndex];
-	document.getElementById("donationInfo").innerHTML = "<span class='fullname'>" + item.firstName + " " + item.lastName + "</span></br>";
-	document.getElementById("donationInfo").innerHTML += "<span class='phone'>" + item.phone + "</span></br>";
-	document.getElementById("donationInfo").innerHTML += "<span class= 'email'>" + item.email + "</span><br>";
-	document.getElementById("donationInfo").innerHTML += "<span class= 'location'>" + item.location + "</span><br>";
-	document.getElementById("donationInfo").innerHTML += "<span class= 'checkboxlist'>" + item.checkboxlist + "</span><br>";
+	var innerHTML = "<span class='phone'>" + item.phone + "</span></br>";
+	innerHTML += "<span class= 'email'>" + item.email + "</span><br>";
+	innerHTML += "<span class= 'location'>" + item.location + "</span><br>";
+	return innerHTML;
+}
+
+function showDonationInfo(e) {
+	if (e.currentTarget.children[1].style.display == "block") {
+		e.currentTarget.children[1].style.display = "none";
+	} else {
+		e.currentTarget.children[1].style.display = "block";
+	}
+}
+
+function showAll() {
+	var donationInfoBoxes = document.getElementsByClassName("donationDetails");
+	for (var i = 0; i < donationInfoBoxes.length; i++) {
+		donationInfoBoxes[i].style.display = "block";
+	}
+}
+
+function hideAll() {
+	var donationInfoBoxes = document.getElementsByClassName("donationDetails");
+	for (var i = 0; i < donationInfoBoxes.length; i++) {
+		donationInfoBoxes[i].style.display = "none";
+	}	
 }
 
 

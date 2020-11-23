@@ -347,8 +347,7 @@ li {
 	padding-top:50px;
 }
 
-
- #fname_error {
+#fname_error {
 	display: none;
 }
 
@@ -361,7 +360,6 @@ li {
  #phone_error {
 	display: none;
 }
-
 
 .error{
 	color:#e63e62;

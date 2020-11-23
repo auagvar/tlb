@@ -1,0 +1,11 @@
+
+.donationDetails {
+	display: none;
+	background-color: #ebebeb;
+}
+
+.donationsList li {
+	cursor: pointer;
+	text-decoration: underline;
+	line-height: 30px;
+}
