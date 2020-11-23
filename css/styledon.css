@@ -238,9 +238,9 @@ li {
 	cursor: pointer;
 }
 
-/*
+
 .donationsContainer {
-	display: flex;
+	display:block; ;
 	margin: 20px;
 }
 
@@ -254,9 +254,7 @@ li {
 	width: 45%;
 	float: right;
 }
-/*
-003b5c
-/*Admin list design*/
+
 .adminSection{
 	margin:0;
 	padding:0;
@@ -330,15 +328,23 @@ li {
 
 
 #donationInfo {
+	display:inline;
 	margin:0;
 	padding:0;
-	display:flex;
-	justify-content:center;
-	align-items:center;
 	min-height:100vh; 
-	background-color:red;
-	float: right;
-
+	background-color:black;
+}
+#donationInfo span{
+	color:white;
+	position:relative;
+	list-style:none;
+	font-size:25px;
+	font-family:monospace;
+	box-sizing:border-box;
+	margin-left:50px;
+	margin-right:50px;
+	margin-top:50px;
+	padding-top:50px;
 }
 
 

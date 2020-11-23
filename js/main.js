@@ -195,6 +195,9 @@ function showDonationInfo(itemIndex) {
 	var item = donations[itemIndex];
 	document.getElementById("donationInfo").innerHTML = "<span class='fullname'>" + item.firstName + " " + item.lastName + "</span></br>";
 	document.getElementById("donationInfo").innerHTML += "<span class='phone'>" + item.phone + "</span></br>";
+	document.getElementById("donationInfo").innerHTML += "<span class= 'email'>" + item.email + "</span><br>";
+	document.getElementById("donationInfo").innerHTML += "<span class= 'location'>" + item.location + "</span><br>";
+	document.getElementById("donationInfo").innerHTML += "<span class= 'checkboxlist'>" + item.checkboxlist + "</span><br>";
 }
 
 
