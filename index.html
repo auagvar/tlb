@@ -38,23 +38,23 @@
 
     <div class="form-group" >
 	   <label>Name*</label>
-	   <input type="text" name="name" placeholder="type your name" id="fname" class="required">
+	   <input type="text" name="name" placeholder="type your name" id="fname" class="required" onblur="handleInputValidation(event, 'fname_error')">
 	   <span id="fname_error" class="error">*The name cannot be empty</span> 
 	</div> 
     <div class="form-group">
 	   <label>Surname*</label>
-	   <input type="text" name="Surname" placeholder="type your Surname" id="lname" class="required"> 
+	   <input type="text" name="Surname" placeholder="type your Surname" id="lname" class="required" onblur="handleInputValidation(event, 'lname_error')"> 
 	   <span id="lname_error" class='error'>*The Surname cannot be empty</span>
 
     </div>
     <div class="form-group">
 	   <label>Email*</label>
-	   <input type="Email" name="email" placeholder="james@edu.aua.am" id="email" class="required">
+	   <input type="Email" name="email" placeholder="james@edu.aua.am" id="email" class="required" onblur="handleInputValidation(event, 'email_error')">
 	   <span id="email_error" class="error">*Valid email is requaired</span>
     </div>
     <div class="form-group">
 	   <label>Phone Number*</label>
-	   <input type="text" name="phonenumber" placeholder="+374 094 00 00 01" id="phonenumber" class="required">
+	   <input type="text" name="phonenumber" placeholder="+374 094 00 00 01" id="phonenumber" class="required" onblur="handleInputValidation(event, 'phone_error')">
 	   <span id="phone_error" class="error">*Valid phonenumber is required</span>
     </div>
     <div class="form-group">

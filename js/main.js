@@ -148,34 +148,65 @@ function checkFunction() {
 	if (!donations) {
 		donations = []		
 	}
+
+	var formValid = true;
+
 	if (donationInfo.firstName == "") {
 		console.log("The name cannot be empty");
 		document.getElementById("fname_error").style.display = "block";
 		document.getElementById("fname").style.backgroundColor= '#efbbcc';
+		formValid = false;
+	} else {
+		document.getElementById("fname_error").style.display = "none";
+		document.getElementById("fname").style.backgroundColor= '#fff';
 	}
 
-	else if (donationInfo.lastName == "") {
+	if (donationInfo.lastName == "") {
 		console.log("The Surname cannot be empty");
 		document.getElementById("lname_error").style.display = "block";
 		document.getElementById("lname").style.backgroundColor= '#efbbcc';
+		formValid = false;
+	} else {
+		document.getElementById("lname_error").style.display = "none";
+		document.getElementById("lname").style.backgroundColor= '#fff';
 	}
 
-	else if (donationInfo.email == "") {
+	if (donationInfo.email == "") {
 		console.log("The email cannot be empty");
 		document.getElementById("email_error").style.display = "block";
 		document.getElementById("email").style.backgroundColor= '#efbbcc';
+		formValid = false;
+	} else {
+		document.getElementById("email_error").style.display = "none";
+		document.getElementById("email").style.backgroundColor= '#fff';
 	}
 
-	else if(donationInfo.phone == "") {
+	if(donationInfo.phone == "") {
 		console.log("The phonenumber cannot be empty");
 		document.getElementById("phone_error").style.display = "block";
 		document.getElementById("phonenumber").style.backgroundColor= '#efbbcc';
+		formValid = false;
 	} else {
-		donations.push(donationInfo)
+		document.getElementById("phone_error").style.display = "none";
+		document.getElementById("phonenumber").style.backgroundColor= '#fff';
 	}
 
-	window.localStorage.setItem("donationInfo", JSON.stringify(donations))
-	
+	if (formValid == true) {
+		donations.push(donationInfo);
+		window.localStorage.setItem("donationInfo", JSON.stringify(donations));
+	}
+}
+
+function handleInputValidation(e, errorMessageBoxID) {
+	console.log(e.target.value);
+	if (e.target.value == "") {
+		document.getElementById(errorMessageBoxID).style.display = "block";
+		e.target.style.backgroundColor= '#efbbcc';
+		formValid = false;
+	} else {
+		document.getElementById(errorMessageBoxID).style.display = "none";
+		e.target.style.backgroundColor= '#fff';
+	}
 }
 
 
