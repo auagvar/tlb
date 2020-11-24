@@ -1,11 +1,67 @@
 
-.donationDetails {
-	display: none;
-	background-color: #ebebeb;
+body{
+	
+		background-image:url("../images/adminbackground.png");
 }
 
+.donationDetails {
+	background-color:rgba(0, 163, 224,0.4);
+	border:solid 1px #003b5c;
+	border-radius: 5px;
+	padding:20px;
+	margin-top:10px;
+	list-style:decimal;
+
+}
+.adminLogoBox{
+	
+	display:block;
+}
+.adminlogo{
+	width:25%;
+	display:block;
+	margin-left:50px;
+
+}
 .donationsList li {
-	cursor: pointer;
-	text-decoration: underline;
-	line-height: 30px;
+	line-height: 20px;
+	list-style:decimal-leading-zero;
+	font-size:15px;
+	padding:15px;
+	cursor:pointer;
+    font-family: Georgia, Times, serif,; 
+    text-transform:uppercase;
+    color:#003b5c;
+	box-sizing:border-box;
+}
+
+.buttonHideandShow{
+	width:fit-content;
+	margin: auto;
+	padding: 10px; 
+
+}
+.donationsContainer {
+	border:solid black;
+	border-radius:10px;
+}
+.showAllBotton {
+	width:100px;
+    padding:8px 8px;
+	border-radius:9px;
+	border:none;
+	background:#003b5c;
+    background-blend-mode:hue;
+    color:white;
+    margin-right:10px;
+}
+.hideAllBotton {
+	width:100px;
+	padding:8px 8px;
+	border-radius:9px;
+	border:none;
+	background:#003b5c;
+    background-blend-mode:hue;
+    color:white;
+    margin-left:10px; 
 }

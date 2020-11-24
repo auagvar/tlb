@@ -225,7 +225,9 @@ function getDonationInfo(item) {
 	var innerHTML = "<span class='phone'>" + item.phone + "</span></br>";
 	innerHTML += "<span class= 'email'>" + item.email + "</span><br>";
 	innerHTML += "<span class= 'location'>" + item.location + "</span><br>";
-	innerHTML += "<span class= 'location'>" + item.items + "</span><br>";
+	innerHTML += "<span class= 'checkboxItems'>" + item.items + "</span><br>";
+	innerHTML += "<span class= 'deliveryMethod'>" + item.deliveryMethod + "</span><br>";
+	innerHTML += "<span class= 'hasShelter'>" + item.hasShelter + "</span><br>";
 	return innerHTML;
 }
 
