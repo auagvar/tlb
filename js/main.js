@@ -194,6 +194,7 @@ function checkFunction() {
 	if (formValid == true) {
 		donations.push(donationInfo);
 		window.localStorage.setItem("donationInfo", JSON.stringify(donations));
+		window.location.href = "thanks.html"
 	}
 }
 
@@ -222,12 +223,12 @@ function loadExistingDonations() {
 }
 
 function getDonationInfo(item) {
-	var innerHTML = "<span class='phone'>" + item.phone + "</span></br>";
-	innerHTML += "<span class= 'email'>" + item.email + "</span><br>";
-	innerHTML += "<span class= 'location'>" + item.location + "</span><br>";
-	innerHTML += "<span class= 'checkboxItems'>" + item.items + "</span><br>";
+	var innerHTML = "<span class='phone'><span class='fieldTitle'>Phone: </span>" + item.phone + "</span><br>";
+	innerHTML += "<span class= 'email'><span class='fieldTitle'>EMAIL: </span>" + item.email + "</span><br>";
+	innerHTML += "<span class= 'location'><span class='fieldTitle'>Location: </span>" + item.location + "</span><br>";
+	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Is ready to donate: </span>" + item.items + "</span><br>";
 	innerHTML += "<span class= 'deliveryMethod'>" + item.deliveryMethod + "</span><br>";
-	innerHTML += "<span class= 'hasShelter'>" + item.hasShelter + "</span><br>";
+	innerHTML += "<span class= 'hasShelter'><span class='fieldTitle'>Provide shelter: </span>" + item.hasShelter + "</span><br>";
 	return innerHTML;
 }
 

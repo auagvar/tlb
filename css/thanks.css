@@ -1,0 +1,24 @@
+body{
+		background-image:url("../images/adminbackground.png");
+}
+
+.AUAlogo{
+	width:30%;
+	display:block;
+	margin-left:50px;
+
+}	
+
+.message{
+	background-color:rgba(0, 163, 224,0.4);
+	border:solid 1px #003b5c;
+	border-radius: 5px;
+	padding:20px;
+	margin-top:10px;
+	list-style:decimal;
+}
+.thankYou{
+	 font-family:Georgia, serif, Times; 
+	 text-align: center;
+	 color:#003b5c;
+}
