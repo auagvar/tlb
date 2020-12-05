@@ -231,6 +231,7 @@ function rejectListing(index) {
 	console.log(donations);
 	localStorage.setItem('donationInfo', JSON.stringify(donations));
 	console.log('Deleted item at index ' + index);
+	document.getElementById("donationsList").innerHTML = '';
 	loadExistingDonations();
 }
 
