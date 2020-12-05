@@ -230,7 +230,7 @@ function rejectListing(index) {
 	donations.splice(index, 1);
 	console.log(donations);
 	localStorage.setItem('donationInfo', JSON.stringify(donations));
-	console.log('Deleted item at index ' + i);
+	console.log('Deleted item at index ' + index);
 	loadExistingDonations();
 }
 
