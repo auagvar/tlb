@@ -239,6 +239,7 @@ function loadExistingDonations() {
 
 function getDonationInfo(item, index) {
 	console.log(item);
+	console.log(i);
 	var innerHTML = "<span class='phone'><span class='fieldTitle'>Phone: </span>" + item.phone + "</span><br>";
 	innerHTML += "<span class= 'email'><span class='fieldTitle'>EMAIL: </span>" + item.email + "</span><br>";
 	innerHTML += "<span class= 'location'><span class='fieldTitle'>Location: </span>" + item.location + "</span><br>";
