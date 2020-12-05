@@ -215,7 +215,7 @@ function handleInputValidation(e, errorMessageBoxID) {
 
 
 function getListingData() {
-	if (window.localStorage.getItem("donationInfo")) {
+	if (JSON.parse(window.localStorage.getItem("donationInfo"))) {
 		return JSON.parse(window.localStorage.getItem("donationInfo"));
 	} else {
 		return []
@@ -228,7 +228,11 @@ function reloadData() {
 }
 
 function getFinalData() {
-	return JSON.parse(window.localStorage.getItem("finalInfo"));
+	if (JSON.parse(window.localStorage.getItem("finalInfo"))) {
+		return JSON.parse(window.localStorage.getItem("finalInfo"));
+	} else {
+		return []
+	}
 }
 
 function getFinalDataTest() {
