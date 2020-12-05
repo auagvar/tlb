@@ -213,6 +213,18 @@ function handleInputValidation(e, errorMessageBoxID) {
 
 //Admin Code
 
+function editListing() {
+
+}
+
+function acceptListing() {
+
+}
+
+function rejectListing() {
+
+}
+
 function loadExistingDonations() {
 	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
 	for (var i = 0; i < donations.length; i++) {
@@ -230,6 +242,9 @@ function getDonationInfo(item) {
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Other Items: </span>" + (item.otherItems ? item.otherItems : "") + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Delivery Method: </span>" + item.deliveryMethod + "</span><br>";
 	innerHTML += "<span class= 'hasShelter'><span class='fieldTitle'>Provide shelter: </span>" + item.hasShelter + "</span><br>";
+	innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
+	innerHTML += "<span class= 'accept'><span class='fieldTitle'><a onclick='acceptListing()'>Accept</a></span></span><br>";
+	innerHTML += "<span class= 'reject'><span class='fieldTitle'><a onclick='rejectListing()'>Reject</a></span></span><br>";
 	return innerHTML;
 }
 

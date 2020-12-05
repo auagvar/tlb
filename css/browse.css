@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/*Navbar start*/
+
+.navbar-flex {
+    height: 100px; 
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+.navbar {
+    height: 100px;
+    width: 100%;
+    border-bottom: 5px black solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+    .navbar ul li {
+        list-style: none;
+        margin: 0 20px;
+        display: inline-block;
+        line-height: 100px;
+        align-items: center;
+    }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 6px 13px;
+            font-family: "Roboto", sans-serif;
+            transition: .4s;
+        }
+
+.nav1 {
+    height: 100px;
+    width: 25%;
+    margin-left: 15px;
+}
+
+#logo {
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-top: 12.5px;
+}
+
+.navbar .nav2 a:hover {
+    background: #e76f51;
+    font-weight: bold;
+}
+
+.nav2 {
+    height: 100px;
+    width: 35%;
+    margin: 15px;
+    margin-top: 0;
+    order: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#donate {
+    width: 30%;
+    text-align: center;
+}
+
+#aboutin {
+    text-align: center;
+}
+
+#volunteer {
+    width: 30%;
+    text-align: center;
+}
+
+.nav3 {
+    height: auto;
+    width: 25%;
+    margin: 15px;
+    margin-top: 0;
+    margin-right: 25px;
+    order: 2;
+    text-align: right;
+}
+
+.navbar .nav3 a:hover {
+    background: #d90012;
+    color: white;
+    font-weight: bold;
+    transition: all .2s ease-in;
+}
+/*Navbar end*/
+.body-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+
+
+
+.browse-flex {
+    height: 100%;
+    order: 1;
+    flex: 1 0 auto;
+    align-self: stretch;
+}
+
+.main-browse {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    height: 100%; 
+}
+/*Start of filters*/
+.filters {
+    font-family: Roboto;  
+    width: 20%;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+
+.filter-container {
+    margin: 10px;
+    border: black 5px solid;
+    border-top: dashed 5px black;
+    border-bottom: dashed 5px black; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+
+.title-filter {
+    height: 50px; 
+    padding:5 0 5 0;
+    border-bottom:3px solid black;  
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+    text-align: center;
+}
+
+.title-subjects {
+    font-weight: bold; 
+    height: 30px;
+    padding: 5 0 5 0;
+    border-bottom: 3px solid black; 
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+    text-align: center;
+    
+}
+
+.filter-subjects {
+    padding: 5 10;
+    border-bottom: solid 3px black;
+    order: 2;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+
+.title-edulevel {
+    font-weight: bold;
+    height: 30px;
+    margin: 5 0 5 0;
+    border-bottom: 3px solid black;
+    order: 3;
+    flex: 0 1 auto;
+    align-self: stretch;
+    text-align: center;
+}
+
+.filter-edulevel {
+    padding: 5 10;
+    border-bottom: 3px solid black;
+    order: 4;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+
+.title-days {
+    font-weight: bold;
+    height: 30px;
+    margin: 5 0 5 0;
+    border-bottom: 3px solid black;
+    order: 5;
+    flex: 0 1 auto;
+    align-self: stretch;
+    text-align: center;
+
+}
+
+.filter-days {
+    padding: 5 10;
+    order: 6;
+    flex: 0 1 auto;
+    align-self: stretch;
+    border-bottom: 3px solid black;
+}
+
+.apply-filter{
+    padding: 10px; 
+    order: 7; 
+    flex: 0 1 auto; 
+    align-self: stretch;  
+    display: flex; 
+    justify-content: center;
+    
+}
+/*End of filters*/
+
+/*----------------------------------*/
+
+/*Start of listings*/
+.listings {
+    order: 1;
+    flex: 1 0 auto;
+    align-self: stretch;
+}
+
+.listing-container {
+    margin: 10px;
+
+    border-bottom: none; 
+    height: 100%;
+}
+
+.class-listing {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+
+.course {
+    height: 200px;
+    border-right: black solid 5px; 
+    border-left: black solid 5px; 
+    border-top: dashed black 5px; 
+    flex: 0 1 auto;
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+    border-bottom: solid black 5px;
+    padding-bottom: 10px; 
+    margin-bottom: 10px; 
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.course-elm1 {
+    padding: 5px;
+    padding-left: 10px;
+    width: 40%;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+
+.teacher-info {
+    padding: 5 5 5 0; 
+    height: 40%;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+.prof-pic {
+    border: black solid 5px; 
+    width: 65.13px;
+    margin-right:5px;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+
+.prof-no-pic {
+    margin-left: 5px;
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: flex-start;
+}
+
+.name-teaching-format {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+
+
+.subject-taught {
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+
+.course-description {
+    background-color:lightgray;
+    height: 60%;
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+    padding: 5px;
+}
+
+.course-elm2 {
+    background-color: lightgray; 
+    margin: 10 10 5 10;
+    width: 30%;
+    order: 1;
+    flex: 0 1 auto;
+    align-self: stretch;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+ 
+    
+}
+
+.center-day time{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+
+
+}
+.day-time {
+    padding:10 10 10 10;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: stretch;
+}
+.course-elm3 {
+    padding: 5px;
+    width: 30%;
+    order: 2;
+    flex: 0 1 auto;
+    align-self: stretch;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-teacher {
+    border: 3px solid #d90012;
+    width: 170px;
+    height: auto;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: white;
+    outline: none;
+}
+
+    .contact-teacher:hover {
+        background-color: #d90012;
+        color: white;
+        font-weight: bold;
+        transition: all .2s ease-in;
+    }
+    /*End of listings*/
+
+.page-nav {
+    order: 5;
+    height: 50px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+
+
+/*Checkmark customization Start*/
+
+/*Checkmark customization End*/
