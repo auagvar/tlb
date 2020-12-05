@@ -221,20 +221,23 @@ function acceptListing() {
 
 }
 
-function rejectListing(listing) {
-	console.log(listing);
+function rejectListing(index) {
+	var donations = getDonationInfo();
+	donations.splice(index, 1);
+	localStorage.setItem('donationInfo', JSON.stringify(donations));
+	console.log('Deleted item at index ' + i);
 }
 
 function loadExistingDonations() {
 	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
 	for (var i = 0; i < donations.length; i++) {
 		if (donations[i].firstName !="") {
-			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(event)'><div>" + donations[i].firstName + " " + donations[i].lastName + "</div><div class='donationDetails'>" + getDonationInfo(donations[i]) + "</div></li>";
+			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(event)'><div>" + donations[i].firstName + " " + donations[i].lastName + "</div><div class='donationDetails'>" + getDonationInfo(donations[i], i) + "</div></li>";
 		}
 	}
 }
 
-function getDonationInfo(item) {
+function getDonationInfo(item, index) {
 	console.log(item);
 	var innerHTML = "<span class='phone'><span class='fieldTitle'>Phone: </span>" + item.phone + "</span><br>";
 	innerHTML += "<span class= 'email'><span class='fieldTitle'>EMAIL: </span>" + item.email + "</span><br>";
@@ -245,7 +248,7 @@ function getDonationInfo(item) {
 	innerHTML += "<span class= 'hasShelter'><span class='fieldTitle'>Provide shelter: </span>" + item.hasShelter + "</span><br>";
 	innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
 	innerHTML += "<span class= 'accept'><span class='fieldTitle'><a onclick='acceptListing()'>Accept</a></span></span><br>";
-	innerHTML += "<span class= 'reject'><span class='fieldTitle'><button type='button' onclick='rejectListing(" + item + ")'>Reject</button></span></span><br>";
+	innerHTML += "<span class= 'reject'><span class='fieldTitle'><button type='button' onclick='rejectListing(" + index + ")'>Reject</button></span></span><br>";
 	return innerHTML;
 }
 
