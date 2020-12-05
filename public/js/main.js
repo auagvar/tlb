@@ -235,6 +235,7 @@ function loadExistingDonations() {
 }
 
 function getDonationInfo(item) {
+	console.log(item);
 	var innerHTML = "<span class='phone'><span class='fieldTitle'>Phone: </span>" + item.phone + "</span><br>";
 	innerHTML += "<span class= 'email'><span class='fieldTitle'>EMAIL: </span>" + item.email + "</span><br>";
 	innerHTML += "<span class= 'location'><span class='fieldTitle'>Location: </span>" + item.location + "</span><br>";
@@ -244,7 +245,7 @@ function getDonationInfo(item) {
 	innerHTML += "<span class= 'hasShelter'><span class='fieldTitle'>Provide shelter: </span>" + item.hasShelter + "</span><br>";
 	innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
 	innerHTML += "<span class= 'accept'><span class='fieldTitle'><a onclick='acceptListing()'>Accept</a></span></span><br>";
-	innerHTML += "<span class= 'reject'><span class='fieldTitle'><a onclick='rejectListing(" + item + ")'>Reject</a></span></span><br>";
+	innerHTML += "<span class= 'reject'><span class='fieldTitle'><button type='button' onclick='rejectListing(" + item + ")'>Reject</button></span></span><br>";
 	return innerHTML;
 }
 
