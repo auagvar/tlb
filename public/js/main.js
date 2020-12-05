@@ -244,7 +244,7 @@ function getDonationInfo(item) {
 	innerHTML += "<span class= 'hasShelter'><span class='fieldTitle'>Provide shelter: </span>" + item.hasShelter + "</span><br>";
 	innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
 	innerHTML += "<span class= 'accept'><span class='fieldTitle'><a onclick='acceptListing()'>Accept</a></span></span><br>";
-	innerHTML += "<span class= 'reject'><span class='fieldTitle'><a onclick='rejectListing(item)'>Reject</a></span></span><br>";
+	innerHTML += "<span class= 'reject'><span class='fieldTitle'><a onclick='rejectListing(" + item + ")'>Reject</a></span></span><br>";
 	return innerHTML;
 }
 
