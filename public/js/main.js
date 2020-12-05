@@ -241,9 +241,9 @@ function getFinalDataTest() {
 
 function renderFinalData() {
 	var listings = getFinalData();
-	foreach(listing in listings) {
-		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + '</h3> </div><div class="subject-taught"><h3>HTML, CSS, JS</h3></div></div></div><div class="course-description"><p>I will devote my time to get this layout no matter anything,you can do it, you can do it, you can do it!</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >';
-    }
+	listings.forEach(listing =>
+		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + '</h3> </div><div class="subject-taught"><h3>HTML, CSS, JS</h3></div></div></div><div class="course-description"><p>I will devote my time to get this layout no matter anything,you can do it, you can do it, you can do it!</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
+	);
 }
 
 function editListing() {
