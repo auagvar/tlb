@@ -213,6 +213,10 @@ function handleInputValidation(e, errorMessageBoxID) {
 
 //Admin Code
 
+function getListingData() {
+	return JSON.parse(window.localStorage.getItem("donationInfo"));
+}
+
 function editListing() {
 
 }
@@ -222,15 +226,16 @@ function acceptListing() {
 }
 
 function rejectListing(index) {
-	var donations = getDonationInfo();
+	var donations = getListingData();
 	donations.splice(index, 1);
+	console.log(donations);
 	localStorage.setItem('donationInfo', JSON.stringify(donations));
 	console.log('Deleted item at index ' + i);
 	loadExistingDonations();
 }
 
 function loadExistingDonations() {
-	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
+	var donations = getListingData();
 	for (var i = 0; i < donations.length; i++) {
 		if (donations[i].firstName !="") {
 			document.getElementById("donationsList").innerHTML += "<li onclick='showDonationInfo(event)'><div>" + donations[i].firstName + " " + donations[i].lastName + "</div><div class='donationDetails'>" + getDonationInfo(donations[i], i) + "</div></li>";
