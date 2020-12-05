@@ -213,16 +213,34 @@ function handleInputValidation(e, errorMessageBoxID) {
 
 //Admin Code
 
+
 function getListingData() {
 	return JSON.parse(window.localStorage.getItem("donationInfo"));
+}
+
+function reloadData() {
+	document.getElementById("donationsList").innerHTML = '';
+	loadExistingDonations();
+}
+
+function getFinalData() {
+	return JSON.parse(window.localStorage.getItem("finalInfo"));
+}
+
+function getFinalDataTest() {
+	console.log(JSON.parse(window.localStorage.getItem("finalInfo")));
 }
 
 function editListing() {
 
 }
 
-function acceptListing() {
-
+function acceptListing(index) {
+	var finalDonations = getFinalData();
+	var donations = getListingData();
+	finalDonations.push(donations[index]);
+	localStorage.setItem('finalInfo', JSON.stringify(finalDonations));
+	rejectListing(index);
 }
 
 function rejectListing(index) {
@@ -231,8 +249,7 @@ function rejectListing(index) {
 	console.log(donations);
 	localStorage.setItem('donationInfo', JSON.stringify(donations));
 	console.log('Deleted item at index ' + index);
-	document.getElementById("donationsList").innerHTML = '';
-	loadExistingDonations();
+	reloadData();
 }
 
 function loadExistingDonations() {
@@ -255,7 +272,7 @@ function getDonationInfo(item, index) {
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Delivery Method: </span>" + item.deliveryMethod + "</span><br>";
 	innerHTML += "<span class= 'hasShelter'><span class='fieldTitle'>Provide shelter: </span>" + item.hasShelter + "</span><br>";
 	innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
-	innerHTML += "<span class= 'accept'><span class='fieldTitle'><a onclick='acceptListing()'>Accept</a></span></span><br>";
+	innerHTML += "<span class= 'accept'><span class='fieldTitle'><a onclick='acceptListing(" + index + ")'>Accept</a></span></span><br>";
 	innerHTML += "<span class= 'reject'><span class='fieldTitle'><button type='button' onclick='rejectListing(" + index + ")'>Reject</button></span></span><br>";
 	return innerHTML;
 }
