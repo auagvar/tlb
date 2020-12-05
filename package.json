@@ -1,0 +1,21 @@
+{
+  "name": "aua-donations-app",
+  "version": "1.0.0",
+  "description": "AUA Donations App",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "AUA",
+    "Donations"
+  ],
+  "author": "AUA Students",
+  "dependencies": {
+    "express": "^4.9.8",
+    "body-parser": "^1.19.0"
+  },
+  "engines": {
+    "node": "10.x"
+  }
+}

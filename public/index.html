@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TLB</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script src="script.js"></script>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="nav1">
+                <a id="logo" href=index.html>
+                    <img src='https://svgshare.com/i/RvL.svg' title='tlb-logo' />
+                </a>
+            </div>
+            <ul class="nav2">
+                <li id="donate"><a href="#">Donate</a></li>
+                <li id="aboutin"><a href="about.html">About</a></li>
+                <li id="volunteer"><a href="#">Volunteer</a></li>
+            </ul>
+            <!--<ul class="nav3">
+                <li id="reg-button"><a href="registration/index.html">Sign up</a></li>
+                <li id="log-button"><a href="registration/index.html">Login</a></li>
+            </ul>-->
+        </nav>
+        <br>
+        <div class="center">
+            <h1>Teach. Learn. Build.</h1>
+
+            <div class="buttons-1">
+                <a id="a-reg-teach" href="registration/index.html">
+                    <button id="reg-teach" onclick="teacher-reg.html">Register as a Teacher</button>
+                </a>
+
+                <a href="browse.html">
+                    <button id="browse" onclick="#">Browse Classes</button>
+                </a>
+
+                <a href="registration/index.html">
+                    <button id="reg-stu" onclick="#">Register as a Student</button>
+                </a>
+
+
+            </div>
+
+            <div class="buttons-2">
+
+                <select id="subject" name="subject">
+                    <option selected disabled>Subject</option>
+                    <option value="armenian">Armenian</option>
+                    <option value="english">English</option>
+                    <option value="russian">Russian</option>
+                    <option value="math">Math</option>
+                    <option value="physics">Physics</option>
+                    <option value="workshops">Workshops</option>
+                    <option value="all-subs">All Subjects</option>
+                </select>
+
+                <button>Teaching Format</button>
+
+                <select id="edu-level" name="edu-level">
+                    <option selected disabled>Level of Education</option>
+                    <option value="high-school">High School</option>
+                    <option value="middle-school">Middle School</option>
+                    <option value="elementary-school">Elementary School</option>
+                    <option value="elementary-school">All Levels</option>
+                </select>
+
+
+
+
+            </div>
+
+            <div class="teaching-format">
+                <button id="online" onclick="#">Online</button>
+                <button id="offline" onclick="#">Offline</button>
+            </div>
+
+            <div id=div-search>
+                <a href="browse.html">
+                <button id="search">Search</button>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
