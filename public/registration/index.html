@@ -34,108 +34,113 @@
  		</div>
  	</div>
 
- <div class="centralbox">
+	<div class="centralbox">
 
-    <div class="form-group" >
-	   <label>Name*</label>
-	   <input type="text" name="name" placeholder="type your name" id="fname" class="required" onblur="handleInputValidation(event, 'fname_error')">
-	   <span id="fname_error" class="error">*The name cannot be empty</span> 
-	</div> 
-    <div class="form-group">
-	   <label>Surname*</label>
-	   <input type="text" name="Surname" placeholder="type your Surname" id="lname" class="required" onblur="handleInputValidation(event, 'lname_error')"> 
-	   <span id="lname_error" class='error'>*The Surname cannot be empty</span>
+		<div class="form-group">
+			<label>Name*</label>
+			<input type="text" name="name" placeholder="type your name" id="fname" class="required" onblur="handleInputValidation(event, 'fname_error')">
+			<span id="fname_error" class="error">*The name cannot be empty</span>
+		</div>
+		<div class="form-group">
+			<label>Surname*</label>
+			<input type="text" name="Surname" placeholder="type your Surname" id="lname" class="required" onblur="handleInputValidation(event, 'lname_error')">
+			<span id="lname_error" class='error'>*The Surname cannot be empty</span>
 
-    </div>
-    <div class="form-group">
-	   <label>Email*</label>
-	   <input type="Email" name="email" placeholder="james@edu.aua.am" id="email" class="required" onblur="handleInputValidation(event, 'email_error')">
-	   <span id="email_error" class="error">*Valid email is requaired</span>
-    </div>
-    <div class="form-group">
-	   <label>Phone Number*</label>
-	   <input type="text" name="phonenumber" placeholder="+374 094 00 00 01" id="phonenumber" class="required" onblur="handleInputValidation(event, 'phone_error')">
-	   <span id="phone_error" class="error">*Valid phonenumber is required</span>
-    </div>
-    <div class="form-group">
-	   <label>Location</label>
-	   <select name="Location" id="selected-location" onchange="handleLocationChange()">
-		 <option value="Armenia" class="location">Armenia</option>
-		 <option value="Europe" class="location">Europe</option>
-		 <option value="USA" class="location">USA</option>
-		 <option value="Russia" class="location">Russia</option>
-		 <option value="Other" class="location">Other</option>
-	   </select>
-    </div>
-    <div class="form-group" id="otherLocationBox">
-	   <label>Other location</label>
-	   <input type="text" name="otherLocation" id="other-location">
-    </div>
-    <div class="form-group" id="allcheckboxlist">
-	   <label for="allcheckboxlist">What do you want to donate?</label>
-	   <div class="checkboxDonations">
-	   	<div>
-	   		<input class="checkboxlist" type="checkbox" id="checkboxFood" value="Food">
-	   		<label for="checkboxFood">Food</label>
-	   	</div>
-	   	<div>
-	   		<input class="checkboxlist" type="checkbox" id="checkboxMedicine" value="Medicine">
-	   		<label for="checkboxFood">Medicine</label>
-	   	</div>
-	   	<div>
-	   		<input class="checkboxlist" type="checkbox" id="checkboxPowerBank" value="Power bank">
-	   		<label for="checkboxFood">Power bank</label>
-	   	</div>
-	   	<div>
-	   		<input class="checkboxlist" type="checkbox" id="checkboxBlanket" value="Blanket">
-	   		<label for="checkboxFood">Blanket</label>
-	   	</div>
-	   	<div>
-	   		<input class="checkboxlist" type="checkbox" id="checkboxMilitaryClothing" value="Military clothing">
-	   		<label for="checkboxFood">Military clothing</label>
-	   	</div>
-	   	<div>
-	   		<input class="checkboxlist" type="checkbox" id="checkboxClothes for Artsakh" value="Clothes for Artsakh">
-	   		<label for="checkboxFood">Clothes for Artsakh</label>
-	   	</div>
-	   	<div>
-	   		<input class="checkboxlist" type="checkbox" id="checkboxOther" value="Other" onclick='handleItemChange()'>
-	   		<label for="checkboxFood">Other</label>
-	   	</div>
-	</div> 
-	</div>  
-	<div class="form-group" id="OtherItemBox">
-	   <label>Other Items</label>
-	   <input type="text" name="Other items" id="OtherItems">
-    </div>
-    <div class="form-group">
-	   <label>How do you want to deliver the Donation ?</label> 
-	   <select name="delivery" id="howWillYouDonate" onchange="handleDeliveryChange()">
-		 <option>I will bring it to AUA</option>
-		 <option>I will give the address that is located in RA, please send the car</option>
-		 <option>I will use "HAYPOST" services</option>
-		 <option>I will send via "GLOBBING"</option>
-		 <option>I will send via "ONEX"</option>
-		 <option >Other</option>
-	   </select>
-	</div> 
+		</div>
+		<div class="form-group">
+			<label>Email*</label>
+			<input type="Email" name="email" placeholder="james@edu.aua.am" id="email" class="required" onblur="handleInputValidation(event, 'email_error')">
+			<span id="email_error" class="error">*Valid email is requaired</span>
+		</div>
+		<div class="form-group">
+			<label>Phone Number*</label>
+			<input type="text" name="phonenumber" placeholder="+374 094 00 00 01" id="phonenumber" class="required" onblur="handleInputValidation(event, 'phone_error')">
+			<span id="phone_error" class="error">*Valid phonenumber is required</span>
+		</div>
+		<div class="form-group">
+			<label>Courses Description *</label>
+			<input type="text" name="courses_description" placeholder="JS, Java" id="courses_description">
+			<!--<span id="phone_error" class="error">*Valid phonenumber is required</span>-->
+		</div>
+		<div class="form-group">
+			<label>Location</label>
+			<select name="Location" id="selected-location" onchange="handleLocationChange()">
+				<option value="Armenia" class="location">Armenia</option>
+				<option value="Europe" class="location">Europe</option>
+				<option value="USA" class="location">USA</option>
+				<option value="Russia" class="location">Russia</option>
+				<option value="Other" class="location">Other</option>
+			</select>
+		</div>
+		<div class="form-group" id="otherLocationBox">
+			<label>Other location</label>
+			<input type="text" name="otherLocation" id="other-location">
+		</div>
+		<div class="form-group" id="allcheckboxlist">
+			<label for="allcheckboxlist">What do you want to donate?</label>
+			<div class="checkboxDonations">
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxFood" value="Food">
+					<label for="checkboxFood">Food</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxMedicine" value="Medicine">
+					<label for="checkboxFood">Medicine</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxPowerBank" value="Power bank">
+					<label for="checkboxFood">Power bank</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxBlanket" value="Blanket">
+					<label for="checkboxFood">Blanket</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxMilitaryClothing" value="Military clothing">
+					<label for="checkboxFood">Military clothing</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxClothes for Artsakh" value="Clothes for Artsakh">
+					<label for="checkboxFood">Clothes for Artsakh</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxOther" value="Other" onclick='handleItemChange()'>
+					<label for="checkboxFood">Other</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group" id="OtherItemBox">
+			<label>Other Items</label>
+			<input type="text" name="Other items" id="OtherItems">
+		</div>
+		<div class="form-group">
+			<label>How do you want to deliver the Donation ?</label>
+			<select name="delivery" id="howWillYouDonate" onchange="handleDeliveryChange()">
+				<option>I will bring it to AUA</option>
+				<option>I will give the address that is located in RA, please send the car</option>
+				<option>I will use "HAYPOST" services</option>
+				<option>I will send via "GLOBBING"</option>
+				<option>I will send via "ONEX"</option>
+				<option>Other</option>
+			</select>
+		</div>
 
-	<div class="form-group" id="other-delivery">
-	  <label>How else would you like to deliver your donation</label>
-	  <input type="text" name="otherWayToDeliver" id="howElsewillYouDonate">
-    </div>
-    <div class="form-group">
-	   <label>Do you want to provide shelter for people from Artskh?</label>
-	   <select name="Do you want to provide shelter for people from Artskh ?" id="ShelterForPeople">
-		 <option>Yes please contact me</option>
-		 <option>No</option>
-	   </select>
-	</div>   
-	<div class="form-group">
-	   <input type="Submit" name="submit" onclick="checkFunction()">
+		<div class="form-group" id="other-delivery">
+			<label>How else would you like to deliver your donation</label>
+			<input type="text" name="otherWayToDeliver" id="howElsewillYouDonate">
+		</div>
+		<div class="form-group">
+			<label>Do you want to provide shelter for people from Artskh?</label>
+			<select name="Do you want to provide shelter for people from Artskh ?" id="ShelterForPeople">
+				<option>Yes please contact me</option>
+				<option>No</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<input type="Submit" name="submit" onclick="checkFunction()">
+		</div>
+
 	</div>
-
- </div>
 
 </section>
 <section2>
