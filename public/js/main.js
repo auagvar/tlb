@@ -218,7 +218,7 @@ function getListingData() {
 	if (window.localStorage.getItem("donationInfo")) {
 		return JSON.parse(window.localStorage.getItem("donationInfo"));
 	} else {
-		return {}
+		return []
 	}
 }
 
