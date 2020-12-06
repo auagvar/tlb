@@ -18,11 +18,11 @@
  	<div class="main-heading">
  		
  		<div class="paragraphBox">
- 			<h1>DONATIONS</h1>
+ 			<h1>Teacher Volunteers</h1>
  		<p>
- 			Dear AUA community,During these hard times of war our contribution is needed more than ever.<br><br> Moreover, our help will be needed even after the war ends - during the reconstruction of Artsakh.<br><br>We highly encourage you to have your input in helping our country to fight this attack and recover.<br><br> You can view donation options below; moreover, you can add anything you consider relevant.<br><br> The donations will be transferred to the borders for our soldiers or to the Artsakh families in shelters. Every bit of help matters.<br><br> Contribute to our future victory.
+			
  		</p>
- 		<p>Below is the form you need to fill out in case you want to help</p>
+ 		<p>Fill in the form so that students can find it on the website.<br>The form will be accepted after moderators approve it.</p>
  		</div>
  	</div>
 
@@ -41,17 +41,21 @@
 		</div>
 		<div class="form-group">
 			<label>Email*</label>
-			<input type="Email" name="email" placeholder="james@edu.aua.am" id="email" class="required" onblur="handleInputValidation(event, 'email_error')">
+			<input type="Email" name="email" placeholder="dasatu@rambler.ru" id="email" class="required" onblur="handleInputValidation(event, 'email_error')">
 			<span id="email_error" class="error">*Valid email is requaired</span>
 		</div>
 		<div class="form-group">
 			<label>Phone Number*</label>
-			<input type="text" name="phonenumber" placeholder="+374 094 00 00 01" id="phonenumber" class="required" onblur="handleInputValidation(event, 'phone_error')">
+			<input type="text" name="phonenumber" placeholder="+374 098 28 88 88" id="phonenumber" class="required" onblur="handleInputValidation(event, 'phone_error')">
 			<span id="phone_error" class="error">*Valid phonenumber is required</span>
 		</div>
 		<div class="form-group">
-			<label>Courses Description *</label>
-			<input type="text" name="courses_description" placeholder="JS, Java" id="courses_description">
+			<label>Preferred Contact Method* (Phone Number, Email, Telegram, etc.)</label>
+			<input type="text" name="contact" placeholder="How do you want students to contact you?" id="phonenumber" class="required" onblur="handleInputValidation(event, 'phone_error')">
+		</div>
+		<div class="form-group">
+			<label>Course Description *</label>
+			<input type="text" name="courses_description" placeholder="Explain the course in a few words" id="courses_description">
 			<!--<span id="phone_error" class="error">*Valid phonenumber is required</span>-->
 		</div>
 		<div class="form-group">
@@ -84,36 +88,36 @@
 					<label for="checkboxFood">Elementary School</label>
 				</div>
 				<!--<div>
-					<input class="checkboxlist" type="checkbox" id="checkboxBlanket" value="Blanket">
-					<label for="checkboxFood">Blanket</label>
-				</div>
-				<div>
-					<input class="checkboxlist" type="checkbox" id="checkboxMilitaryClothing" value="Military clothing">
-					<label for="checkboxFood">Military clothing</label>
-				</div>
-				<div>
-					<input class="checkboxlist" type="checkbox" id="checkboxClothes for Artsakh" value="Clothes for Artsakh">
-					<label for="checkboxFood">Clothes for Artsakh</label>
-				</div>
-				<div>
-					<input class="checkboxlist" type="checkbox" id="checkboxOther" value="Other" onclick='handleItemChange()'>
-					<label for="checkboxFood">Other</label>
-				</div>-->
+				<input class="checkboxlist" type="checkbox" id="checkboxBlanket" value="Blanket">
+				<label for="checkboxFood">Blanket</label>
+			</div>
+			<div>
+				<input class="checkboxlist" type="checkbox" id="checkboxMilitaryClothing" value="Military clothing">
+				<label for="checkboxFood">Military clothing</label>
+			</div>
+			<div>
+				<input class="checkboxlist" type="checkbox" id="checkboxClothes for Artsakh" value="Clothes for Artsakh">
+				<label for="checkboxFood">Clothes for Artsakh</label>
+			</div>
+			<div>
+				<input class="checkboxlist" type="checkbox" id="checkboxOther" value="Other" onclick='handleItemChange()'>
+				<label for="checkboxFood">Other</label>
+			</div>-->
 			</div>
 		</div>
 		<!--<div class="form-group" id="OtherItemBox">
-			<label>Other Items</label>
-			<input type="text" name="Other items" id="OtherItems">
-		</div>-->
+		<label>Other Items</label>
+		<input type="text" name="Other items" id="OtherItems">
+	</div>-->
 		<div class="form-group">
 			<label>How do you wish to conduct the classes?</label>
 			<select name="teachingFormat" id="howWillYouDonate" onchange="handleDeliveryChange()">
 				<option>I will bring it to AUA</option>
 				<option>I will give the address that is located in RA, please send the car</option>
 				<!--<option>I will use "HAYPOST" services</option>
-				<option>I will send via "GLOBBING"</option>
-				<option>I will send via "ONEX"</option>
-				<option>Other</option>-->
+			<option>I will send via "GLOBBING"</option>
+			<option>I will send via "ONEX"</option>
+			<option>Other</option>-->
 			</select>
 		</div>
 
