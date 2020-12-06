@@ -10,14 +10,6 @@
 
 	<header>
  	<div class="top-upper-header"></div>
-
-    <div class="top-header-area">
-        <div class="aua-logo">
-    	    <a href="https://aua.am/" title="American University of Armenia" rel="home"> 
-    	    <img src="../images/aualogo.png" alt="American University of Armenia" class="aua-logo-img"/> 
-    	    </a>
-        </div>    
-    </div>
     <div class="boxik">
     
     </div>
@@ -63,35 +55,35 @@
 			<!--<span id="phone_error" class="error">*Valid phonenumber is required</span>-->
 		</div>
 		<div class="form-group">
-			<label>Location</label>
+			<label>Subjects you can teach</label>
 			<select name="Location" id="selected-location" onchange="handleLocationChange()">
-				<option value="Armenia" class="location">Armenia</option>
-				<option value="Europe" class="location">Europe</option>
-				<option value="USA" class="location">USA</option>
-				<option value="Russia" class="location">Russia</option>
-				<option value="Other" class="location">Other</option>
+				<option value="Armenian" class="location">Armenian</option>
+				<option value="English" class="location">English</option>
+				<option value="Russian" class="location">Russian</option>
+				<option value="Math" class="location">Math</option>
+				<option value="Physics" class="location">Physics</option>
 			</select>
 		</div>
 		<div class="form-group" id="otherLocationBox">
-			<label>Other location</label>
+			<label>Other subject/workshop</label>
 			<input type="text" name="otherLocation" id="other-location">
 		</div>
 		<div class="form-group" id="allcheckboxlist">
-			<label for="allcheckboxlist">What do you want to donate?</label>
+			<label for="allcheckboxlist">At what level can you teach?</label>
 			<div class="checkboxDonations">
 				<div>
-					<input class="checkboxlist" type="checkbox" id="checkboxFood" value="Food">
-					<label for="checkboxFood">Food</label>
+					<input class="checkboxlist" type="checkbox" id="checkboxHigh" value="High School">
+					<label for="checkboxFood">High School</label>
 				</div>
 				<div>
-					<input class="checkboxlist" type="checkbox" id="checkboxMedicine" value="Medicine">
-					<label for="checkboxFood">Medicine</label>
+					<input class="checkboxlist" type="checkbox" id="checkboxMiddle" value="Middle School">
+					<label for="checkboxFood">Middle School</label>
 				</div>
 				<div>
-					<input class="checkboxlist" type="checkbox" id="checkboxPowerBank" value="Power bank">
-					<label for="checkboxFood">Power bank</label>
+					<input class="checkboxlist" type="checkbox" id="checkboxElementary" value="Elementary School">
+					<label for="checkboxFood">Elementary School</label>
 				</div>
-				<div>
+				<!--<div>
 					<input class="checkboxlist" type="checkbox" id="checkboxBlanket" value="Blanket">
 					<label for="checkboxFood">Blanket</label>
 				</div>
@@ -106,22 +98,22 @@
 				<div>
 					<input class="checkboxlist" type="checkbox" id="checkboxOther" value="Other" onclick='handleItemChange()'>
 					<label for="checkboxFood">Other</label>
-				</div>
+				</div>-->
 			</div>
 		</div>
-		<div class="form-group" id="OtherItemBox">
+		<!--<div class="form-group" id="OtherItemBox">
 			<label>Other Items</label>
 			<input type="text" name="Other items" id="OtherItems">
-		</div>
+		</div>-->
 		<div class="form-group">
-			<label>How do you want to deliver the Donation ?</label>
-			<select name="delivery" id="howWillYouDonate" onchange="handleDeliveryChange()">
+			<label>How do you wish to conduct the classes?</label>
+			<select name="teachingFormat" id="howWillYouDonate" onchange="handleDeliveryChange()">
 				<option>I will bring it to AUA</option>
 				<option>I will give the address that is located in RA, please send the car</option>
-				<option>I will use "HAYPOST" services</option>
+				<!--<option>I will use "HAYPOST" services</option>
 				<option>I will send via "GLOBBING"</option>
 				<option>I will send via "ONEX"</option>
-				<option>Other</option>
+				<option>Other</option>-->
 			</select>
 		</div>
 
