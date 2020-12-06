@@ -61,7 +61,7 @@ body{
 }
 .main-heading h1{
 	text-align:center;
-	font-family:Georgia, Times, serif;
+	font-family:, Times, ;
 	color:#00a3e0;
 	letter-spacing:5px;
 	font-size:30px;
@@ -81,7 +81,7 @@ body{
 	margin-top:8px;
 	font-size:15px;
 	text-align:center;
-	font-family:Georgia, Times, serif;
+	font-family:Roboto, Times, ;
 	color:#003b5c;
 	font-stretch:ultra-expanded;
 	line-height:20px;
@@ -89,7 +89,6 @@ body{
 }
 
 .centralbox {
-	background-image:url("../images/tp3.png");
 	background-repeat: no-repeat;
 	background-size:100%;
 	background-position:left;	 
@@ -98,8 +97,8 @@ body{
 	
 }
 .form-group {
-	background-color:rgba(0,163,224, 0.6);
-	font-family:Georgia, Times, serif;
+	background-color:white;
+	font-family:Roboto,;
 	font-weight:bold;
 	padding:10px 30px;
 
@@ -118,7 +117,7 @@ body{
 	padding:8px;
 	display:block;
 	text-align:left;
-	font-family:Georgia, Times, serif;
+	font-family:Roboto;
 	text-transform:uppercase;
 	color:#003b5c;
 	border:3px solid #003b5c;
@@ -176,7 +175,7 @@ body{
 	padding:8px;
 	display:block;
 	text-align:left;
-	font-family:Georgia, Times, serif;
+	font-family:Roboto;
 	text-transform:uppercase;
 	color:#003b5c;
 	border:3px solid #003b5c;
@@ -211,7 +210,7 @@ body{
 	font-size:15px;
 	text-align:center;
 	font-weight:bold;
-	font-family:Georgia, Times, serif;
+	font-family:Roboto;
 	color:#003b5c;
 	line-height:20px;
 	padding:10px;

@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\public",
+    "\\public\\css",
+    "\\public\\js",
+    "\\public\\registration"
   ],
-  "SelectedNode": "\\public",
+  "SelectedNode": "\\public\\css\\browse.css",
   "PreviewInSolutionExplorer": false
 }
