@@ -65,7 +65,7 @@ function loadExistingData() {
 		if(selectableDelivery.includes(donationInfo.deliveryMethod)){
 			document.getElementById('howWillYouDonate').value=donationInfo.deliveryMethod
 		}else{
-			document.getElementById('howWillYouDonate').value="Other";
+			//document.getElementById('howWillYouDonate').value="Other";
 			document.getElementById('howElsewillYouDonate').value=donationInfo.deliveryMethod
 		}
 		handleDeliveryChange()

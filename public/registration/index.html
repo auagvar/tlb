@@ -60,14 +60,28 @@
 		</div>
 		<div class="form-group">
 			<label>Subjects you can teach</label>
-			<select name="Location" id="selected-location" onchange="handleLocationChange()">
-				<option value="Armenian" class="location">Armenian</option>
-				<option value="English" class="location">English</option>
-				<option value="Russian" class="location">Russian</option>
-				<option value="Math" class="location">Math</option>
-				<option value="Physics" class="location">Physics</option>
-			</select>
-		</div>
+			<div class="checkboxDonations">
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxHigh" value="Armenia">
+					<label for="checkboxFood">Armenian</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxMiddle" value="English">
+					<label for="checkboxFood">Englsih</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxElementary" value="Russian">
+					<label for="checkboxFood">Russian</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxElementary" value="Math">
+					<label for="checkboxFood">Math</label>
+				</div>
+				<div>
+					<input class="checkboxlist" type="checkbox" id="checkboxElementary" value="Physics">
+					<label for="checkboxFood">Physics</label>
+				</div>
+			</div>
 		<div class="form-group" id="otherLocationBox">
 			<label>Other subject/workshop</label>
 			<input type="text" name="otherLocation" id="other-location">
