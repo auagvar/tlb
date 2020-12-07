@@ -111,13 +111,13 @@ function checkFunction() {
 	var phoneNumber = document.getElementById('phonenumber').value;
 	donationInfo.phone = phoneNumber;
 
-	var location = document.getElementById('selected-location').value;
-	donationInfo.location = location; 
+	//var location = document.getElementById('selected-location').value;
+	//donationInfo.location = location; 
 
-	var otherLocation = document.getElementById('other-location').value;
-	if (location == "Other" && otherLocation != "") {
-		donationInfo.location = otherLocation
-	}
+	//var otherLocation = document.getElementById('other-location').value;
+	//if (location == "Other" && otherLocation != "") {
+	//	donationInfo.location = otherLocation
+	//}
 
 	var checkbox = document.getElementsByClassName("checkboxlist");
 	var allCheckedItems =[];
