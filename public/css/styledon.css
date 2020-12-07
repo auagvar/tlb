@@ -238,7 +238,7 @@ li {
 
 
 .donationsContainer {
-	display:block; ;
+	display:block;
 	margin: 20px;
 }
 
@@ -275,15 +275,14 @@ li {
 	font-size:25px;
 	padding:15px;
 	cursor:pointer;
-	color:#fff;
+	color:grey;
 	font-family:monospace;
 	box-sizing:border-box;
-	transition:0.5s;
 	z-index:-0;
 }
 .donationsList li:hover{
 
-	color:#111; 
+	color:green; 
 }
 .donationsList li:before{
 	content:'';
