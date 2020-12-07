@@ -291,7 +291,7 @@ li {
 	left:0;
 	width:100%;
 	height:100%;
-	background-color:darkgrey;
+	background-color:none;
     /*z-index:-1;
     transform: scaleY(0);
     transition: transform 0.5s;*/
