@@ -263,7 +263,7 @@ function getFinalData() {
 function getFinalDataTest() {
 	console.log(JSON.parse(window.localStorage.getItem("finalInfo")));
 }
-
+//FINAL DATA
 function renderFinalData() {
 	var listings = getFinalData();
 	listings.forEach(listing =>
