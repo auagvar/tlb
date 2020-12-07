@@ -222,6 +222,25 @@ function checkFunction() {
 	}
 }
 
+if (formValid == true) {
+	$.ajax({
+		type: 'POST',
+		url: "/donation",
+		data: donationInfo,
+		cache: false,
+		dataType: 'json',
+		success: function (data) {
+			console.log("success");
+			window.location.href = "thanks.html";
+		},
+		error: function (xhr) {
+			console.error("Error in post", xhr);
+		},
+		complete: function () {
+			console.log("Complete");
+		}
+	});
+
 
 function handleInputValidation(e, errorMessageBoxID) {
 	console.log(e.target.value);
