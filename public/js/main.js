@@ -142,16 +142,16 @@ function checkFunction() {
 	donationInfo.subItems = subCheckedItems;
 
 
-	var howWillYouDonate = document.getElementById('howWillYouDonate').value;
-	donationInfo.deliveryMethod = howWillYouDonate;
+	//var howWillYouDonate = document.getElementById('howWillYouDonate').value;
+	//donationInfo.deliveryMethod = howWillYouDonate;
 
-	var howElsewillYouDonate = document.getElementById('howElsewillYouDonate').value;
-	if (howWillYouDonate == "Other" && howElsewillYouDonate != "") {
-		donationInfo.deliveryMethod = howElsewillYouDonate
-	}
+	//var howElsewillYouDonate = document.getElementById('howElsewillYouDonate').value;
+	//if (howWillYouDonate == "Other" && howElsewillYouDonate != "") {
+	//	donationInfo.deliveryMethod = howElsewillYouDonate
+	//}
 
-	var shelterForPeople = document.getElementById('ShelterForPeople').value;
-	donationInfo.hasShelter = shelterForPeople;
+	//var shelterForPeople = document.getElementById('ShelterForPeople').value;
+	//donationInfo.hasShelter = shelterForPeople;
 
 	var coursesDescription = document.getElementById('courses_description').value;
 	donationInfo.coursesDescription = coursesDescription;
