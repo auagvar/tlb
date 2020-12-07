@@ -132,6 +132,16 @@ function checkFunction() {
 	}
 	donationInfo.items = allCheckedItems;
 
+	var checkboxSub = document.getElementsByClassName("checkboxSub");
+	var subCheckedItems = [];
+	for (var i = 0; i < checkboxSub.length; i++) {
+		if (checkboxSub[i].checked == true) {
+				subCheckedItems.push(checkbox[i].value);
+			}
+		}
+	}
+	donationInfo.subItems = subCheckedItems;
+
 
 	var howWillYouDonate = document.getElementById('howWillYouDonate').value;
 	donationInfo.deliveryMethod = howWillYouDonate;
@@ -257,7 +267,7 @@ function getFinalDataTest() {
 function renderFinalData() {
 	var listings = getFinalData();
 	listings.forEach(listing =>
-		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + '</h3> </div><div class="subject-taught"><h3>' + listing.coursesDescription + '</h3></div></div></div><div class="course-description"><p>I will devote my time to get this layout no matter anything,you can do it, you can do it, you can do it!</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
+		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + ' [' + listing.subItems + ']</h3> </div><div class="subject-taught"><h3>' + listing.coursesDescription + '</h3></div></div></div><div class="course-description"><p>I will devote my time to get this layout no matter anything,you can do it, you can do it, you can do it!</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
 	);
 }
 
@@ -298,6 +308,7 @@ function getDonationInfo(item, index) {
 	innerHTML += "<span class= 'email'><span class='fieldTitle'>EMAIL: </span>" + item.email + "</span><br>";
 	innerHTML += "<span class= 'location'><span class='fieldTitle'>Location: </span>" + item.location + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Items: </span>" + item.items + "</span><br>";
+	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Items: </span>" + item.subItems + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Other Items: </span>" + (item.otherItems ? item.otherItems : "") + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Delivery Method: </span>" + item.deliveryMethod + "</span><br>";
 	innerHTML += "<span class= 'hasShelter'><span class='fieldTitle'>Provide shelter: </span>" + item.hasShelter + "</span><br>";
