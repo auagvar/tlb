@@ -138,7 +138,6 @@ function checkFunction() {
 		if (checkboxSub[i].checked == true) {
 				subCheckedItems.push(checkbox[i].value);
 			}
-		}
 	}
 	donationInfo.subItems = subCheckedItems;
 
@@ -222,6 +221,7 @@ function checkFunction() {
 		window.location.href = "thanks.html"
 	}
 }
+
 
 function handleInputValidation(e, errorMessageBoxID) {
 	console.log(e.target.value);
