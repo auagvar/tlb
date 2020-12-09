@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TLB</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<nav class="navbar">
+			<div class="nav1">
+				<a id="logo" href="index.html"><img src=images/tlb-logo.svg></a>
+			</div>
+			<ul class="nav2">
+				<li id="donate"><a href="#">Donate</a></li>
+				<li id="aboutin"><a href="about.html">About</a></li>
+				<li id="volunteer"><a href="#">Volunteer</a></li>
+			</ul>
+			<ul class="nav3">
+				<li id="reg-button"><a href="reg-log.html">Sign up</a></li>
+				<li id="log-button"><a href="reg-log.html">Login</a></li>
+			</ul>
+		</nav>
+		<header class="about">
+			<h1>Teacher Volunteer Registration</h1>
+			<br>
+			<p>
+				Register to teach students on voluntary basis.
+			</p>
+		</header>
+		<div style="margin-bottom: 50px;"></div>
+
+	</div>
+
+
+
+	<div style="margin-top: 500px;">
+
+	</div>
+</body>
+</html>
+
+
+<!-- Start of My Code-->
+<!--
+			<div>
+				<form class="my-form">
+			<div class="form-group">
+				<label>First Name</label>
+				<input type="text" name="lastName" placeholder="Enter first name">
+			</div>
+			<br>
+			<div class="form-group">
+			<label>Last Name</label>
+			<input type="text" name="lastName" placeholder="Enter last name">
+			</div>
+			<br>
+			<div class="form-group">
+			<label>Email</label>
+			<input type="email" name="email" placeholder="Enter email address">
+			</div>
+			<br>
+			<div class="form-group">
+			<label>Message</label>
+			<textarea name="message"></textarea>
+		</div>
+		<div>
+			<input class="button" type="submit" name="submit" value="submit">
+		</div>
+	-->
+<!-- -->
+<!-- Start of AUA code -->
+<!--<div class="aua-form">
+	<div style="margin-bottom: 50px;">
+
+	</div>
+	<br>
+	<div id="form-content">
+		<div>
+			<label for="fname" style="font-weight: bold; ">First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+			<br>
+
+			<label for="lname" style="font-weight: bold; ">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			<br>
+
+			<label for="email" style="font-weight: bold; ">Email</label>
+			<input type="text" id="email" name="email" placeholder="Your email..">
+
+			<br>
+
+			<label for="phoneNumber" style="font-weight: bold;">Phone Number (optional)</label>
+			<input type="text" id="phone" name="phoneNumber" placeholder="Your phone number...">
+
+			<br>
+
+			<p id="gender" style="font-weight: bold;">Please select your gender:</p>
+				<p class="gender-options">
+					<label>
+						<input name="gender" type="radio" class="age" value="Male" />
+						<span>Male</span>
+					</label>
+				</p>
+				<p class="gender-options">
+					<label>
+						<input name="gender" type="radio" class="age" value="Female" />
+						<span>Female</span>
+					</label>
+				</p>
+
+				<p class="gender-options">
+					<label>
+						<input name="gender" type="radio" class="age" value="Prefer not to say">
+						<span>Prefer not to say</span>
+					</label>
+				</p>
+
+			<p id="age" style="font-weight: bold; ">Please select your age</p>
+			<select id="selected-age">
+				<option>Less than 18</option>
+				<option>18-24</option>
+				<option>25-34</option>
+				<option>35-44</option>
+				<option>45-54</option>
+				<option>55-65</option>
+				<option>More than 65</option>
+				<option>Prefer not to say</option>
+			</select>
+
+			<br>
+
+			<label for="country" style="font-weight: bold; ">Country</label>
+			<select id="selected-country" name="country" onchange="handleLocationChange()">
+				<option value="Armenia">Armenia</option>
+				<option value="Australia">Australia</option>
+				<option value="Canada">Canada</option>
+				<option value="Georgia">Georgia</option>
+				<option value="India">India</option>
+				<option value="Iran">Iran</option>
+				<option value="Lebanon">Lebanon</option>
+				<option value="Russia">Russia</option>
+				<option value="Syria">Syria</option>
+				<option value="Ukraine">Ukraine</option>
+				<option value="UK">UK</option>
+				<option value="USA">USA</option>
+				<option value="Other">Other</option>
+			</select>
+
+			<div class="form-group" id="otherLocationBox">
+				<label style="font-weight: bold; ">Other location</label>
+				<input type="text" name="otherLocation" id="other-location">
+			</div>
+
+			<label for="free-time" style="font-weight: bold; ">Free Time Available</label>
+			<input type="text" id="free-time" name="free-time" placeholder="Mention free time available e.g. 18:30-20:30 ...">
+
+			<div id="skills">
+				<label for="skills" style="font-weight: bold; display: block;">Skills</label>
+				<div>
+					<input class="skill" type="checkbox" id="logistics" name="logistics" value="Logistics">
+					<label for="logistics">Armenian</label>
+				</div>
+				<div>
+					<input class="skill" type="checkbox" id="physical" name="physical" value="Physical Work">
+					<label for="physical">English</label>
+				</div>
+				<div>
+					<input class="skill" type="checkbox" id="writing" name="writing" value="Writing value">
+					<label for="writing">Russian</label>
+				</div>
+				<div>
+					<input class="skill" type="checkbox" id="english" name="english" value="English Language">
+					<label for="english">Math</label>
+				</div>
+				<div>
+					<input class="skill" type="checkbox" id="social" name="social" value="Social Media Mobilization">
+					<label for="social">Physics</label>
+				</div>
+				<div>
+					<input class="skill" type="checkbox" id="notlistedskill" name="notlistedskill" value="Other" onchange="handleSkillChange()">
+					<label for="notlistedskill">Workshops</label>
+				</div>
+
+				<input type="text" id="other-skills" name="other-skills">
+			</div>
+				<input type="submit" value="Submit" class="volunteering-submit" onclick="checkFunction()">
+		</div>
+	</div>
+</div>-->
+<!--End of AUA code-->
