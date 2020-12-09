@@ -1,26 +1,26 @@
-//function handleLocationChange() {
-//	if (document.getElementById('selected-location').value == "Other") {
-//		document.getElementById('otherLocationBox').style.display = "block";
-//	} else {
-//		document.getElementById('otherLocationBox').style.display = "none";
-//		document.getElementById('other-location').value = ""
-//	}
-//}
-//function handleDeliveryChange() {
-//	if(document.getElementById('howWillYouDonate').value=="Other") {
-//		document.getElementById('other-delivery').style.display="block";
-//	} else{
-//		document.getElementById('other-delivery').style.display="none";
-//		document.getElementById('howElsewillYouDonate').value=""
-//	}
-//}
-//function handleItemChange(){
-//	if(document.getElementById('checkboxOther').checked == true) {
-//		document.getElementById("OtherItemBox").style.display='block';
-//	} else { 
-//		document.getElementById("OtherItemBox").style.display='none';
-//		document.getElementById('OtherItems').value=""
-//	}
+function handleLocationChange() {
+	if (document.getElementById('selected-location').value == "Other") {
+		document.getElementById('otherLocationBox').style.display = "block";
+	} else {
+		document.getElementById('otherLocationBox').style.display = "none";
+		document.getElementById('other-location').value = ""
+	}
+}
+function handleDeliveryChange() {
+	if(document.getElementById('howWillYouDonate').value=="Other") {
+		document.getElementById('other-delivery').style.display="block";
+	} else{
+		document.getElementById('other-delivery').style.display="none";
+		document.getElementById('howElsewillYouDonate').value=""
+	}
+}
+function handleItemChange(){
+	if(document.getElementById('checkboxOther').checked == true) {
+		document.getElementById("OtherItemBox").style.display='block';
+	} else { 
+		document.getElementById("OtherItemBox").style.display='none';
+		document.getElementById('OtherItems').value=""
+	}
 	
 
 }
@@ -154,8 +154,8 @@ function checkFunction() {
 	//var shelterForPeople = document.getElementById('ShelterForPeople').value;
 	//donationInfo.hasShelter = shelterForPeople;
 
-	var coursesDescription = document.getElementById('courses_description').value;
-	donationInfo.coursesDescription = coursesDescription;
+	var courseDescription = document.getElementById('course_description').value;
+	donationInfo.courseDescription = courseDescription;
 
 
 	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
@@ -269,7 +269,7 @@ function getFinalData() {
 function renderFinalData() {
 	var listings = getFinalData();
 	listings.forEach(listing =>
-		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + ' [' + listing.subItems + ']</h3> </div><div class="subject-taught"><h3>' + listing.coursesDescription + '</h3></div></div></div><div class="course-description"><p>I will devote my time to get this layout no matter anything,you can do it, you can do it, you can do it!</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
+		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + ' [' + listing.subItems + ']</h3> </div><div class="subject-taught"><h3>' + listing.courseDescription + '</h3></div></div></div><div class="course-description"><p>I will devote my time to get this layout no matter anything,you can do it, you can do it, you can do it!</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
 	);
 }
 
