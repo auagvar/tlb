@@ -355,6 +355,10 @@ img {
     min-width:300px;
 }
 
+    .course-description p {
+        overflow-wrap: break-word;
+    }
+
 .course-elm2 {
     background-color: lightgray; 
     margin: 10 10 5 10;
