@@ -89,31 +89,35 @@
 
 
 function checkFunction() {
-	var donationInfo = {
+	var listingInfo = {
 		"firstName" : "",
 		"lastName" : "",
 		"email" : "",
-		"phone" : "",
-		"location" : "",
-		"items": [],
-		"subItems" : [],
-		"deliveryMethod" : "",
+		"phone": "",
+		"contact": "",
+		"description" : "",
+		"subjects": [],
+		"eduLevel" : [],
+		"format" : [],
 	}	
 
 	var fname = document.getElementById('fname').value;
-	donationInfo.firstName = fname;
+	listingInfo.firstName = fname;
 
 	var lname = document.getElementById('lname').value;
-	donationInfo.lastName = lname;
+	listingInfo.lastName = lname;
 
 	var email = document.getElementById('email').value;
-	donationInfo.email = email; 
+	listingInfo.email = email; 
 
 	var phoneNumber = document.getElementById('phonenumber').value;
-	donationInfo.phone = phoneNumber; 
+	listingInfo.phone = phoneNumber; 
+
+	var contact = document.getElementById('contact').value;
+	dontationIn
 
 	var courseDescription = document.getElementById('course_description').value;
-	donationInfo.courseDescription = courseDescription;
+	listingInfo.description = courseDescription;
 
 	//var location = document.getElementById('selected-location').value;
 	//donationInfo.location = location; 
@@ -123,40 +127,38 @@ function checkFunction() {
 	//	donationInfo.location = otherLocation
 	//}
 
-	var checkbox = document.getElementsByClassName("checkboxlist");
-	var allCheckedItems =[];
-	for (var i = 0; i < checkbox.length; i++) {
-		if( checkbox[i].checked == true){
-			allCheckedItems.push(checkbox[i].value);
-		}
-	}
-	donationInfo.items = allCheckedItems;
+
+	//CHECKBOX DATA TO OBJECT 
+
 
 	var checkboxSub = document.getElementsByClassName("checkboxSub");
 	var subCheckedItems = [];
 	for (var i = 0; i < checkboxSub.length; i++) {
 		if (checkboxSub[i].checked == true) {
-				subCheckedItems.push(checkboxSub[i].value);
-			}
+			subCheckedItems.push(checkboxSub[i].value);
+		}
 	}
-	donationInfo.subItems = subCheckedItems;
+	listingInfo.subjects = subCheckedItems;
 
+	var checkboxEdu = document.getElementsByClassName("checkboxEducation");
+	var eduCheckedItems =[];
+	for (var i = 0; i < checkboxEdu.length; i++) {
+		if( checkboxEdu[i].checked == true){
+			eduCheckedItems.push(checkboxEdu[i].value);
+		}
+	}
+	listingInfo.eduLevel = eduCheckedItems;
 
-	//var howWillYouDonate = document.getElementById('howWillYouDonate').value;
-	//donationInfo.deliveryMethod = howWillYouDonate;
+	var checkboxFormat = document.getElementsByClassName("checkboxFormat");
+	var formatCheckedItems = [];
+	for (var i = 0; i < checkboxFormat.length; i++) {
+		if (checkboxFormat[i].checked == true) {
+			formatCheckedItems.push(checkboxFormat[i].value);
+		}
+	}
+	listingInfo.format = formatCheckedItems;
 
-	//var howElsewillYouDonate = document.getElementById('howElsewillYouDonate').value;
-	//if (howWillYouDonate == "Other" && howElsewillYouDonate != "") {
-	//	donationInfo.deliveryMethod = howElsewillYouDonate
-	//}
-
-	//var shelterForPeople = document.getElementById('ShelterForPeople').value;
-	//donationInfo.hasShelter = shelterForPeople;
-
-
-
-
-	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
+	var donations = JSON.parse(window.localStorage.getItem("listingInfo"));
 	if (!donations) {
 		donations = []		
 	}
@@ -164,7 +166,7 @@ function checkFunction() {
 	//form validation 
 	var formValid = true;
 
-	if (donationInfo.firstName == "") {
+	if (listingInfo.firstName == "") {
 		console.log("The name cannot be empty");
 		document.getElementById("fname_error").style.display = "block";
 		document.getElementById("fname").style.backgroundColor= '#efbbcc';
@@ -174,7 +176,7 @@ function checkFunction() {
 		document.getElementById("fname").style.backgroundColor= '#fff';
 	}
 
-	if (donationInfo.lastName == "") {
+	if (listingInfo.lastName == "") {
 		console.log("The Surname cannot be empty");
 		document.getElementById("lname_error").style.display = "block";
 		document.getElementById("lname").style.backgroundColor= '#efbbcc';
@@ -184,7 +186,7 @@ function checkFunction() {
 		document.getElementById("lname").style.backgroundColor= '#fff';
 	}
 
-	if (donationInfo.email == "") {
+	if (listingInfo.email == "") {
 		console.log("The email cannot be empty");
 		document.getElementById("email_error").style.display = "block";
 		document.getElementById("email").style.backgroundColor= '#efbbcc';
@@ -194,7 +196,7 @@ function checkFunction() {
 		document.getElementById("email").style.backgroundColor= '#fff';
 	}
 
-	if(donationInfo.phone == "") {
+	if(listingInfo.phone == "") {
 		console.log("The phonenumber cannot be empty");
 		document.getElementById("phone_error").style.display = "block";
 		document.getElementById("phonenumber").style.backgroundColor= '#efbbcc';
@@ -205,19 +207,11 @@ function checkFunction() {
 	}
 
 
-	//if (donationInfo.coursesDescription == "") {
-	//	console.log("The name cannot be empty");
-	//	document.getElementById("fname_error").style.display = "block";
-	//	document.getElementById("fname").style.backgroundColor = '#efbbcc';
-	//	formValid = false;
-	//} else {
-	//	document.getElementById("fname_error").style.display = "none";
-	//	document.getElementById("fname").style.backgroundColor = '#fff';
-	//}
+
 
 	if (formValid == true) {
-		donations.push(donationInfo);
-		window.localStorage.setItem("donationInfo", JSON.stringify(donations));
+		donations.push(listingInfo);
+		window.localStorage.setItem("listingInfo", JSON.stringify(donations));
 		window.location.href = "thanks.html"
 	}
 }
@@ -241,8 +235,8 @@ function handleInputValidation(e, errorMessageBoxID) {
 
 
 function getListingData() {
-	if (JSON.parse(window.localStorage.getItem("donationInfo"))) {
-		return JSON.parse(window.localStorage.getItem("donationInfo"));
+	if (JSON.parse(window.localStorage.getItem("listingInfo"))) {
+		return JSON.parse(window.localStorage.getItem("listingInfo"));
 	} else {
 		return []
 	}
@@ -282,7 +276,7 @@ function acceptListing(index) {
 function rejectListing(index) {
 	var donations = getListingData();
 	donations.splice(index, 1);
-	localStorage.setItem('donationInfo', JSON.stringify(donations));
+	localStorage.setItem('listingInfo', JSON.stringify(donations));
 	reloadData();
 }
 

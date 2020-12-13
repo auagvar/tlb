@@ -439,6 +439,7 @@
 
 .course_text{ 
     padding: 10px; 
+    padding-left: 0; 
     font-family: sans-serif;
     resize: none; 
     min-height: 75px; 
@@ -460,6 +461,24 @@
     background: white; 
 }
 
-.error{
-    visibility: hidden;
+#fname_error {
+    display: none;
+}
+
+#lname_error {
+    display: none;
+}
+
+#email_error {
+    display: none;
+}
+
+#phone_error {
+    display: none;
+}
+
+.error {
+    color: #e63e62;
+    font-size: 12px;
+    margin-top: 5px;
 }
