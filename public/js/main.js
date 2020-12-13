@@ -113,7 +113,7 @@ function checkFunction() {
 
 	if (formValid == true) {
 		listings.push(listingInfo);
-		window.localStorage.setItem("listingInfo", JSON.stringify(courses));
+		window.localStorage.setItem("listingInfo", JSON.stringify(listings));
 		window.location.href = "thanks.html"
 	}
 }
