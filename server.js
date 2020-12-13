@@ -19,8 +19,8 @@ app.get('/', function (req, res) {
   res.render('index', {});
 })
 
-app.get('/donations', function (req, res) {
-  res.send({"donations":db_json});
+app.get('/courses', function (req, res) {
+  res.send({"courses":db_json});
 })
 
 app.post('/', function (req, res) {

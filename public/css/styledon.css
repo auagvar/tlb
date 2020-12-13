@@ -242,7 +242,7 @@ li {
 	margin: 20px;
 }
 
-#donationsList {
+#courseListings {
 	position: relative;
 	float: left;
 	width: 400px;
@@ -264,12 +264,12 @@ li {
 	float: left;
 
 }
-.donationsList{
+.courseListings{
 	margin:0;
 	padding:0;
 	box-shadow: 0 15px 40px rgba(0,0,0,1); 
 }
-.donationsList li{
+.courseListings li{
 	position:relative;
 	list-style:none;
 	font-size:25px;
@@ -281,11 +281,11 @@ li {
 	transition:0.5s;
 	z-index:-0;
 }
-.donationsList li:hover{
+.courseListings li:hover{
 
 	color:#111; 
 }
-.donationsList li:before{
+.courseListings li:before{
 	content:'';
 	position: absolute;
 	top:0;
@@ -298,13 +298,13 @@ li {
     transition: transform 0.5s;
     transform-origin: bottom;
 }
-.donationsList li:hover:before{
+.courseListings li:hover:before{
 	transform: scaleY(1);
     transition: transform 0.5s;
     transform-origin: top;
 }
 
-.donationsList li:after{
+.courseListings li:after{
 	content:'';
 	position: absolute;
 	top:0;
@@ -318,7 +318,7 @@ li {
     transform-origin: bottom;
     filter: blur(40px);
 }
-.donationsList li:hover:after{
+.courseListings li:hover:after{
 	transform: scaleY(1);
     transition: transform 0.5s;
     transform-origin: top;
