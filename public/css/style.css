@@ -436,3 +436,8 @@
     background-color: #e76f51;
     border: solid 3px black;
 }
+
+.course_text{ 
+    resize: none; 
+    min-height:150px; 
+}
