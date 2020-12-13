@@ -194,7 +194,7 @@ function getCourseInfo(item, index) {
 	console.log(index);
 	var innerHTML = "<span class='phone'><span class='fieldTitle'>Phone: </span>" + item.phone + "</span><br>";
 	innerHTML += "<span class= 'email'><span class='fieldTitle'>EMAIL: </span>" + item.email + "</span><br>";
-	innerHTML += "<span class= 'location'><span class='fieldTitle'>Location: </span>" + item.description + "</span><br>";
+	innerHTML += "<span class= 'location'><span class='fieldTitle'>Description: </span>" + item.description + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Subjects: </span>" + item.subjects + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Education Level: </span>" + item.eduLevel + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Format: </span>" + item.format + "</span><br>";
