@@ -456,3 +456,7 @@
 .form-input:focus{ 
     background: white; 
 }
+
+.error{
+    visibility: hidden;
+}
