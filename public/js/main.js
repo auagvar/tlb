@@ -133,8 +133,6 @@ function handleInputValidation(e, errorMessageBoxID) {
 }
 
 
-//
-
 
 function getListingData() {
 	if (JSON.parse(window.localStorage.getItem("listingInfo"))) {
@@ -165,14 +163,6 @@ function rejectListing(index) {
 	reloadData();
 }
 
-function acceptListing(index) {
-	var finalCourses = getFinalData();
-	var courses = getListingData();
-	finalCourses.push(courses[index]);
-	localStorage.setItem('finalInfo', JSON.stringify(finalCourses));
-	rejectListing(index);
-}
-
 function getFinalData() {
 	if (JSON.parse(window.localStorage.getItem("finalInfo"))) {
 		return JSON.parse(window.localStorage.getItem("finalInfo"));
@@ -181,10 +171,20 @@ function getFinalData() {
 	}
 }
 
-
-function editListing() {
-
+function acceptListing(index) {
+	var finalCourses = getFinalData();
+	var courses = getListingData();
+	finalCourses.push(courses[index]);
+	localStorage.setItem('finalInfo', JSON.stringify(finalCourses));
+	rejectListing(index);
 }
+
+
+
+
+//function editListing() {
+
+//}
 
 
 
@@ -213,27 +213,27 @@ function renderFinalData() {
 }
 
 
-function showDonationInfo(e) {
-	if (e.currentTarget.children[1].style.display == "block") {
-		e.currentTarget.children[1].style.display = "none";
-	} else {
-		e.currentTarget.children[1].style.display = "block";
-	}
-}
+//function showDonationInfo(e) {
+//	if (e.currentTarget.children[1].style.display == "block") {
+//		e.currentTarget.children[1].style.display = "none";
+//	} else {
+//		e.currentTarget.children[1].style.display = "block";
+//	}
+//}
 
-function showAll() {
-	var donationInfoBoxes = document.getElementsByClassName("donationDetails");
-	for (var i = 0; i < donationInfoBoxes.length; i++) {
-		donationInfoBoxes[i].style.display = "block";
-	}
-}
+//function showAll() {
+//	var donationInfoBoxes = document.getElementsByClassName("donationDetails");
+//	for (var i = 0; i < donationInfoBoxes.length; i++) {
+//		donationInfoBoxes[i].style.display = "block";
+//	}
+//}
 
-function hideAll() {
-	var donationInfoBoxes = document.getElementsByClassName("donationDetails");
-	for (var i = 0; i < donationInfoBoxes.length; i++) {
-		donationInfoBoxes[i].style.display = "none";
-	}	
-}
+//function hideAll() {
+//	var donationInfoBoxes = document.getElementsByClassName("donationDetails");
+//	for (var i = 0; i < donationInfoBoxes.length; i++) {
+//		donationInfoBoxes[i].style.display = "none";
+//	}	
+//}
 
 
 
