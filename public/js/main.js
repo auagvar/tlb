@@ -198,7 +198,7 @@ function getCourseInfo(item, index) {
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Subjects: </span>" + item.subjects + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Education Level: </span>" + item.eduLevel + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Format: </span>" + item.format + "</span><br>";
-	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Contact: </span>" + item.contact + "</span><br>";
+	innerHTML += "<span class= 'contact'><span class='fieldTitle'>Contact: </span>" + item.contact + "</span><br>";
 	innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
 	innerHTML += "<span class= 'accept'><span class='fieldTitle'><button type='button' onclick='acceptListing(" + index + ")'>Accept</button></span></span><br>";
 	innerHTML += "<span class= 'reject'><span class='fieldTitle'><button type='button' onclick='rejectListing(" + index + ")'>Reject</button></span></span><br>";
