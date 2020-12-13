@@ -407,7 +407,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
     height: auto;
     margin-bottom: 75px;
     font-family: sans-serif; 
@@ -438,8 +438,7 @@
 }
 
 .course_text{ 
-    padding: 10px; 
-    padding-left: 0; 
+    padding: 5px; 
     font-family: sans-serif;
     resize: none; 
     min-height: 75px; 
