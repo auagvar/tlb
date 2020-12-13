@@ -1,91 +1,91 @@
-function handleLocationChange() {
-	if (document.getElementById('selected-location').value == "Other") {
-		document.getElementById('otherLocationBox').style.display = "block";
-	} else {
-		document.getElementById('otherLocationBox').style.display = "none";
-		document.getElementById('other-location').value = ""
-	}
-}
-function handleDeliveryChange() {
-	if(document.getElementById('howWillYouDonate').value=="Other") {
-		document.getElementById('other-delivery').style.display="block";
-	} else{
-		document.getElementById('other-delivery').style.display="none";
-		document.getElementById('howElsewillYouDonate').value=""
-	}
-}
-function handleItemChange(){
-	if(document.getElementById('checkboxOther').checked == true) {
-		document.getElementById("OtherItemBox").style.display='block';
-	} else { 
-		document.getElementById("OtherItemBox").style.display='none';
-		document.getElementById('OtherItems').value=""
-	}
-	
+//function handleLocationChange() {
+//	if (document.getElementById('selected-location').value == "Other") {
+//		document.getElementById('otherLocationBox').style.display = "block";
+//	} else {
+//		document.getElementById('otherLocationBox').style.display = "none";
+//		document.getElementById('other-location').value = ""
+//	}
+//}
+//function handleDeliveryChange() {
+//	if(document.getElementById('howWillYouDonate').value=="Other") {
+//		document.getElementById('other-delivery').style.display="block";
+//	} else{
+//		document.getElementById('other-delivery').style.display="none";
+//		document.getElementById('howElsewillYouDonate').value=""
+//	}
+//}
+//function handleItemChange(){
+//	if(document.getElementById('checkboxOther').checked == true) {
+//		document.getElementById("OtherItemBox").style.display='block';
+//	} else { 
+//		document.getElementById("OtherItemBox").style.display='none';
+//		document.getElementById('OtherItems').value=""
+//	}	
+//}
 
-}
-function loadExistingData() {
-	donationInfo = JSON.parse(window.localStorage.getItem("donationInfo"));
-	if (donationInfo && donationInfo.length > 0) {
-		donationInfo = donationInfo[0]
-		document.getElementById('fname').value = donationInfo.firstName;
-		document.getElementById('lname').value = donationInfo.lastName;
-		document.getElementById('email').value = donationInfo.email;
-		document.getElementById('phonenumber').value = donationInfo.phone;
-		document.getElementById('contact').value = donationInfo.contact;
+
+//function loadExistingData() {
+//	donationInfo = JSON.parse(window.localStorage.getItem("donationInfo"));
+//	if (donationInfo && donationInfo.length > 0) {
+//		donationInfo = donationInfo[0]
+//		document.getElementById('fname').value = donationInfo.firstName;
+//		document.getElementById('lname').value = donationInfo.lastName;
+//		document.getElementById('email').value = donationInfo.email;
+//		document.getElementById('phonenumber').value = donationInfo.phone;
+//		document.getElementById('contact').value = donationInfo.contact;
 		
-		var selectableLocationOptions = document.getElementsByClassName("location");
-		var selectableLocationNames = []
+//		var selectableLocationOptions = document.getElementsByClassName("location");
+//		var selectableLocationNames = []
 
-		for (var i = 0; i < selectableLocationOptions.length; i++) {
-			var locationName = selectableLocationOptions[i].value;
-			if (locationName != "Other") {
-				selectableLocationNames.push(locationName)
-			}
-		}
+//		for (var i = 0; i < selectableLocationOptions.length; i++) {
+//			var locationName = selectableLocationOptions[i].value;
+//			if (locationName != "Other") {
+//				selectableLocationNames.push(locationName)
+//			}
+//		}
 
-		if (selectableLocationNames.includes(donationInfo.location)) {
-			document.getElementById('selected-location').value = donationInfo.location;
-		} else {
-			document.getElementById('selected-location').value = "Other";
-			document.getElementById('other-location').value = donationInfo.location;
-		}
+//		if (selectableLocationNames.includes(donationInfo.location)) {
+//			document.getElementById('selected-location').value = donationInfo.location;
+//		} else {
+//			document.getElementById('selected-location').value = "Other";
+//			document.getElementById('other-location').value = donationInfo.location;
+//		}
 
-		handleLocationChange()
-
-
-		var selectableDeliveryOptions=document.getElementById("howWillYouDonate").children;
-		var selectableDelivery =[]
-
-		for(var k=0; k< selectableDeliveryOptions.length; k++){
-			var deliveryWay=selectableDeliveryOptions[k].value;
-			if (deliveryWay != "Other"){
-				selectableDelivery.push(deliveryWay)
-			}
-		}
-		if(selectableDelivery.includes(donationInfo.deliveryMethod)){
-			document.getElementById('howWillYouDonate').value=donationInfo.deliveryMethod
-		}else{
-			//document.getElementById('howWillYouDonate').value="Other";
-			document.getElementById('howElsewillYouDonate').value=donationInfo.deliveryMethod
-		}
-		handleDeliveryChange()
+//		handleLocationChange()
 
 
-		var checkbox = document.getElementsByClassName("checkboxlist");
-		for (var i = 0; i < checkbox.length; i++) {
-			if( donationInfo.items.includes(checkbox[i].value)){
-				checkbox[i].checked = true
-				var index = donationInfo.items.indexOf(checkbox[i].value)
-				donationInfo.items.splice(index, 0);
-				console.log(donationInfo.items)
-			}
-		}
+//		var selectableDeliveryOptions=document.getElementById("howWillYouDonate").children;
+//		var selectableDelivery =[]
 
-		handleItemChange()
+//		for(var k=0; k< selectableDeliveryOptions.length; k++){
+//			var deliveryWay=selectableDeliveryOptions[k].value;
+//			if (deliveryWay != "Other"){
+//				selectableDelivery.push(deliveryWay)
+//			}
+//		}
+//		if(selectableDelivery.includes(donationInfo.deliveryMethod)){
+//			document.getElementById('howWillYouDonate').value=donationInfo.deliveryMethod
+//		}else{
+//			//document.getElementById('howWillYouDonate').value="Other";
+//			document.getElementById('howElsewillYouDonate').value=donationInfo.deliveryMethod
+//		}
+//		handleDeliveryChange()
 
-	}
-}
+
+//		var checkbox = document.getElementsByClassName("checkboxlist");
+//		for (var i = 0; i < checkbox.length; i++) {
+//			if( donationInfo.items.includes(checkbox[i].value)){
+//				checkbox[i].checked = true
+//				var index = donationInfo.items.indexOf(checkbox[i].value)
+//				donationInfo.items.splice(index, 0);
+//				console.log(donationInfo.items)
+//			}
+//		}
+
+//		handleItemChange()
+
+//	}
+//}
 
 
 function checkFunction() {
@@ -95,9 +95,9 @@ function checkFunction() {
 		"email" : "",
 		"phone" : "",
 		"location" : "",
-		"items" : [],
+		"items": [],
+		"subItems" : [],
 		"deliveryMethod" : "",
-		"hasShelter" : false 
 	}	
 
 	var fname = document.getElementById('fname').value;
@@ -110,7 +110,10 @@ function checkFunction() {
 	donationInfo.email = email; 
 
 	var phoneNumber = document.getElementById('phonenumber').value;
-	donationInfo.phone = phoneNumber;
+	donationInfo.phone = phoneNumber; 
+
+	var courseDescription = document.getElementById('course_description').value;
+	donationInfo.courseDescription = courseDescription;
 
 	//var location = document.getElementById('selected-location').value;
 	//donationInfo.location = location; 
@@ -124,11 +127,7 @@ function checkFunction() {
 	var allCheckedItems =[];
 	for (var i = 0; i < checkbox.length; i++) {
 		if( checkbox[i].checked == true){
-			if (checkbox[i].value == "Other") {
-				donationInfo.otherItems = document.getElementById('OtherItems').value;
-			} else {
-				allCheckedItems.push(checkbox[i].value);
-			}
+			allCheckedItems.push(checkbox[i].value);
 		}
 	}
 	donationInfo.items = allCheckedItems;
@@ -137,7 +136,7 @@ function checkFunction() {
 	var subCheckedItems = [];
 	for (var i = 0; i < checkboxSub.length; i++) {
 		if (checkboxSub[i].checked == true) {
-				subCheckedItems.push(checkbox[i].value);
+				subCheckedItems.push(checkboxSub[i].value);
 			}
 	}
 	donationInfo.subItems = subCheckedItems;
@@ -154,8 +153,7 @@ function checkFunction() {
 	//var shelterForPeople = document.getElementById('ShelterForPeople').value;
 	//donationInfo.hasShelter = shelterForPeople;
 
-	var courseDescription = document.getElementById('course_description').value;
-	donationInfo.courseDescription = courseDescription;
+
 
 
 	var donations = JSON.parse(window.localStorage.getItem("donationInfo"));
@@ -163,6 +161,7 @@ function checkFunction() {
 		donations = []		
 	}
 
+	//form validation 
 	var formValid = true;
 
 	if (donationInfo.firstName == "") {
@@ -266,12 +265,7 @@ function getFinalData() {
 //	console.log(JSON.parse(window.localStorage.getItem("finalInfo")));
 //}
 //FINAL DATA
-function renderFinalData() {
-	var listings = getFinalData();
-	listings.forEach(listing =>
-		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + ' [' + listing.subItems + ']</h3> </div><div class="subject-taught"><h3>' + listing.courseDescription + '</h3></div></div></div><div class="course-description"><p>I will devote my time to get this layout no matter anything,you can do it, you can do it, you can do it!</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
-	);
-}
+
 
 function editListing() {
 
@@ -288,9 +282,7 @@ function acceptListing(index) {
 function rejectListing(index) {
 	var donations = getListingData();
 	donations.splice(index, 1);
-	console.log(donations);
 	localStorage.setItem('donationInfo', JSON.stringify(donations));
-	console.log('Deleted item at index ' + index);
 	reloadData();
 }
 
@@ -319,6 +311,14 @@ function getDonationInfo(item, index) {
 	innerHTML += "<span class= 'reject'><span class='fieldTitle'><button type='button' onclick='rejectListing(" + index + ")'>Reject</button></span></span><br>";
 	return innerHTML;
 }
+
+function renderFinalData() {
+	var listings = getFinalData();
+	listings.forEach(listing =>
+		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/Square-Profile-Pic-1.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + ' [' + listing.subItems + ']</h3> </div><div class="subject-taught"><h3>' + listing.courseDescription + '</h3></div></div></div><div class="course-description"><p>' + courseDescription + '</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
+	);
+}
+
 
 function showDonationInfo(e) {
 	if (e.currentTarget.children[1].style.display == "block") {

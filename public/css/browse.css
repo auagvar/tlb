@@ -186,7 +186,7 @@
 .title-edulevel {
     font-weight: bold;
     height: 30px;
-    margin: 5 0 5 0;
+    padding: 5 0;
     border-bottom: 3px solid black;
     order: 3;
     flex: 0 1 auto;
@@ -205,13 +205,12 @@
 .title-days {
     font-weight: bold;
     height: 30px;
-    margin: 5 0 5 0;
+    padding: 5 0;
     border-bottom: 3px solid black;
     order: 5;
     flex: 0 1 auto;
     align-self: stretch;
     text-align: center;
-
 }
 
 .filter-days {
@@ -260,9 +259,12 @@
 
 .course {
     height: 200px;
-    border-right: black solid 5px; 
-    border-left: black solid 5px; 
-    border-top: dashed black 5px; 
+    border-right: black solid 5px;
+    border-left: black solid 5px;
+    border-top: dashed black 5px;
+    border-bottom: solid black 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
     flex: 0 1 auto;
     align-self: stretch;
     display: flex;
@@ -271,9 +273,6 @@
     justify-content: flex-start;
     align-content: stretch;
     align-items: flex-start;
-    border-bottom: solid black 5px;
-    padding-bottom: 10px; 
-    margin-bottom: 10px; 
 }
 
 img {
@@ -352,6 +351,8 @@ img {
     flex: 0 1 auto;
     align-self: stretch;
     padding: 5px;
+    max-width:600px;
+    min-width:300px;
 }
 
 .course-elm2 {
