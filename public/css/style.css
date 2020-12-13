@@ -438,9 +438,11 @@
 }
 
 .course_text{ 
+    padding: 10px; 
     font-family: sans-serif;
     resize: none; 
     min-height: 75px; 
+    min-width: 150px; 
 }
 
 .form-input {
