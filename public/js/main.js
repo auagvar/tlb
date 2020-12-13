@@ -199,7 +199,7 @@ function getCourseInfo(item, index) {
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Education Level: </span>" + item.eduLevel + "</span><br>";
 	innerHTML += "<span class= 'checkboxItems'><span class='fieldTitle'>Format: </span>" + item.format + "</span><br>";
 	innerHTML += "<span class= 'contact'><span class='fieldTitle'>Contact: </span>" + item.contact + "</span><br>";
-	innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
+	//innerHTML += "<span class= 'edit'><span class='fieldTitle'><a onclick='editListing()'>Edit</a></span></span><br>";
 	innerHTML += "<span class= 'accept'><span class='fieldTitle'><button type='button' onclick='acceptListing(" + index + ")'>Accept</button></span></span><br>";
 	innerHTML += "<span class= 'reject'><span class='fieldTitle'><button type='button' onclick='rejectListing(" + index + ")'>Reject</button></span></span><br>";
 	return innerHTML;
@@ -208,7 +208,7 @@ function getCourseInfo(item, index) {
 function renderFinalData() {
 	var listings = getFinalData();
 	listings.forEach(listing =>
-		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + ' [' + listing.eduLevel + ']</h3> </div><div class="subject-taught"><h3>' + listing.subjects + ' </h3></div></div></div><div class="course-description"><p>' + listing.description + '</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
+		document.getElementById("courses").innerHTML += '<div class="course"><div class="course-elm1" ><div class="teacher-info"><div class="prof-pic"><img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="Profile picture" /></div><div class="prof-no-pic"><div class="name-teaching-format"><h3>' + listing.firstName + ' ' + listing.lastName + ' [' + listing.format + ']</h3> </div><div class="subject-taught"><h3>' + listing.subjects + ' </h3></div></div></div><div class="course-description"><p>' + listing.description + '</p></div></div ><div class="course-elm2"><div class="center-day-time"><div class="day-time"><h4>Mon: 16:00-18:00</h4></div><div class="day-time"><h4>Wed: 16:00-18:00</h4></div><div class="day-time"><h4>Fri: 16:00-18:00</h4></div></div></div><div class="course-elm3"><a href="#"><button class="contact-teacher">Contact</button></a></div></div >'
 	);
 }
 
