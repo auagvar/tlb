@@ -441,3 +441,19 @@
     resize: none; 
     min-height:150px; 
 }
+
+.form-input{
+    -webkit-appearance: none; 
+
+    width: 100%; 
+    max-width: 400px; 
+    padding: 5px; 
+    font-size: 0.8em; 
+    border: 1px solid #808080; 
+    font-family: sans-serif; 
+    background: #746f6f
+}
+
+.form-input:focus{ 
+    background: white; 
+}
